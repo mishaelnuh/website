@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bitter', serif;
 }
 
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bitter', serif;
 }
 
 body {
@@ -23,7 +23,6 @@ body {
 h3 {
   font-size: 14px !important;
   font-weight: bold !important;
-  text-transform: uppercase;
 }
 
 .card {
@@ -33,6 +32,16 @@ h3 {
 .card:hover {
   cursor: pointer;
   background-color: #eeeeee;
+}
+
+#markdown {
+  text-align: left;
+}
+
+#markdown img {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #aaaaaa;
 }
 
 @import 'node_modules/bootstrap/scss/bootstrap';

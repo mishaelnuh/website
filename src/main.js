@@ -10,9 +10,12 @@ import './custom.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faCoffee, faPenFancy, faDog } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+library.add(faCoffee)
+library.add(faPenFancy)
+library.add(faDog)
 library.add(faTwitter)
 library.add(faLinkedin)
 library.add(faEnvelope)

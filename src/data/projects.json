@@ -4,42 +4,35 @@
   "title": "RodSteward-GH",
   "shortDesc": "Generating structures using standard rods and 3D printed connections",
   "image": "/project/rodsteward-gh/banner.png",
-  "content": "TODO"
-},
-{
-  "id": "festi",
-  "title": "FESTI Special Operations Campus",
-  "shortDesc": "A future-ready emergency response training institute.",
-  "image": "/project/festi/banner.png",
-  "content": "TODO"
+  "content": "/project/rodsteward-gh/content.md"
 },
 {
   "id": "speckleexcel",
   "title": "SpeckleExcel",
   "shortDesc": "Speckle client for Microsoft Excel",
   "image": "/project/speckleexcel/banner.png",
-  "content": "TODO"
+  "content": "/project/speckleexcel/content.md"
 },
 {
   "id": "speckleprocessor",
   "title": "SpeckleProcessor",
   "shortDesc": "Perform calculations on Speckle data from the web",
   "image": "/project/speckleprocessor/banner.png",
-  "content": "TODO"
+  "content": "/project/speckleprocessor/content.md"
 },
 {
   "id": "ccm",
   "title": "Canadian Canoe Museum",
   "shortDesc": "Structural design as part of Arup",
   "image": "/project/ccm/banner.png",
-  "content": "TODO"
+  "content": "/project/ccm/content.md"
 },
 {
   "id": "gtaa",
   "title": "Greater Toronto Pearson Airport",
   "shortDesc": "Structural design of expansions and retrofits as part of Arup",
   "image": "/project/gtaa/banner.png",
-  "content": "TODO"
+  "content": "/project/gtaa/content.md"
 },
 {
   "id": "cstx",
@@ -64,7 +57,7 @@
 },
 {
   "id": "hypt",
-  "title": "Verification of Novel 2D Finite Element for Reinforced and Prestressed Concrete",
+  "title": "Verification of a Novel 2D Finite Element for Reinforced and Prestressed Concrete",
   "shortDesc": "American Concrete Institute Conference Spring 2017",
   "image": "/project/hypt/banner.png",
   "content": "TODO"

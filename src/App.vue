@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <b-container class="mb-5 mt-5">
+    <b-container class="mb-5 mt-5" >
       <b-row>
         <b-col>
-          <b-navbar toggleable="sm" type="light">
-            <b-navbar-brand href="#/">MISHAEL NUH</b-navbar-brand>
+          <b-navbar toggleable="sm" type="light" style="padding-left: 0px; padding-right: 0px; margin-bottom: 50px;">
+            <b-navbar-brand href="#/" style="font-size: 150%; font-weight: bold;">mishael nuh</b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
               <b-navbar-nav class="ml-auto">
@@ -16,8 +16,12 @@
           </b-navbar>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col>
+        <router-view :key="$route.fullPath"></router-view>
+        </b-col>
+      </b-row>
     </b-container>
-    <router-view></router-view>
   </div>
 </template>
 
