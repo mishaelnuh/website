@@ -7,6 +7,13 @@
   "content": "/project/rodsteward-gh/content.md"
 },
 {
+  "id": "specklemeetup",
+  "title": "Speckle Community Meetup",
+  "shortDesc": "Presented at the Speckle Community Meetup 2019 in London, UK",
+  "image": "/project/specklemeetup/banner.png",
+  "content": "/project/specklemeetup/content.md"
+},
+{
   "id": "speckleexcel",
   "title": "SpeckleExcel",
   "shortDesc": "Speckle client for Microsoft Excel",

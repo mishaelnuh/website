@@ -10,6 +10,10 @@
           <p>My name is Mishael Nuh. I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering.</p>
           <br/>
           <p>
+            <font-awesome-icon icon="globe-americas"/> Toronto, Canada
+          </p>
+          <br/>
+          <p>
             <font-awesome-icon icon="coffee"/> coffee addict | 
             <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
             <font-awesome-icon icon="dog"/> lover of dogs
