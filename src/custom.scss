@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #fafafa !important;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+h3 {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
