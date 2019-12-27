@@ -11,8 +11,8 @@ export default new VueRouter({
       component: () => import('./pages/Home.vue'),
     },
     {
-      path: '/project/:projectId',
-      name: 'project',
-      component: () => import('./pages/Project.vue'),
+      path: '/page/:pageId',
+      name: 'page',
+      component: () => import('./pages/Page.vue'),
     }]
 })

@@ -20,11 +20,11 @@
           </p>
         </b-col>
       </b-row>
-      <b-row id="projects">
+      <b-row>
         <b-col>
-          <b-row v-for="(row, index) in groupedProjects" :key="index">
+          <b-row v-for="(row, index) in groupedPages" :key="index">
             <b-col md="4" v-for="p in row" :key="p.id">
-              <b-card style="height: 90%;" img-bottom :img-src="p.image" @click="clickProject(p)">
+              <b-card style="height: 90%;" img-bottom :img-src="p.image" @click="clickPage(p)">
                 <b-card-body style="text-align: left; padding-bottom: 40px;">
                   <b-card-text>
                     <h3>{{p.title}}</h3>
@@ -41,32 +41,32 @@
 </template>
 
 <script>
-import projData from "../data/projects.json";
+import pageData from "../data/pages.json";
 
 export default {
   name: "Home",
   data() {
     return {
-      projects: projData,
+      pages: pageData,
     };
   },
   computed: {
-    groupedProjects() {
+    groupedPages() {
       let grouped = []
       let start = 0
-      for (let i = start; i < this.projects.length; i += 3) {
-        if (i + 3 > this.projects.length)
-          grouped.push(this.projects.slice(i, i + this.projects.length % 3))
+      for (let i = start; i < this.pages.length; i += 3) {
+        if (i + 3 > this.pages.length)
+          grouped.push(this.pages.slice(i, i + this.pages.length % 3))
         else
-          grouped.push(this.projects.slice(i, i + 3))
+          grouped.push(this.pages.slice(i, i + 3))
       }
       return grouped
     },
   },
   mounted() {},
   methods: {
-    clickProject(project) {
-      this.$router.push('/project/' + project.id)
+    clickPage(page) {
+      this.$router.push('/page/' + page.id)
     },
   }
 };

@@ -1,12 +1,12 @@
 <template>
-  <div v-if="project">
+  <div v-if="page">
     <b-container>
       <b-row>
         <b-col md='1'>
         </b-col>
         <b-col md='10'>
           <div mb-5>
-            <h1 style="text-align: left;">{{project.title}}</h1>
+            <h2 style="text-align: left;">{{page.title}}</h2>
           </div>
         </b-col>
       </b-row>
@@ -32,35 +32,35 @@
 </template>
 
 <script>
-import projData from "../data/projects.json"
+import pageData from "../data/pages.json"
 import marked from "marked"
 
 export default {
-  name: "Project",
+  name: "Page",
   data() {
     return {
-      projects: projData,
+      pages: pageData,
       selectedId: '',
       markdownContent: '',
     };
   },
   computed: {
-    project() {
-      return this.projects.find(x => x.id === this.selectedId)
+    page() {
+      return this.pages.find(x => x.id === this.selectedId)
     },
-    projIndex() {
-      return this.projects.findIndex(x => x.id === this.selectedId)
+    pageIndex() {
+      return this.pages.findIndex(x => x.id === this.selectedId)
     }
   },
   mounted() {
-    if (this.$route.params.projectId)
+    if (this.$route.params.pageId)
     {
-      this.selectedId = this.$route.params.projectId
-      if (!this.project) {
+      this.selectedId = this.$route.params.pageId
+      if (!this.page) {
         this.$router.push('/')
       }
       const http = new XMLHttpRequest()
-      http.open('GET', this.project.content)
+      http.open('GET', this.page.content)
       http.send()
       http.onreadystatechange = () => {
         this.markdownContent = marked(http.responseText)
@@ -71,14 +71,14 @@ export default {
   },
   methods: {
     goToPrev() {
-      if (this.projIndex >= 1)
-        this.$router.push({ name: 'project', params: { projectId: this.projects[this.projIndex - 1].id }})
+      if (this.pageIndex >= 1)
+        this.$router.push({ name: 'page', params: { pageId: this.pages[this.pageIndex - 1].id }})
       else
         this.$router.push('/')
     },
     goToNext() {
-      if (this.projIndex < this.projects.length - 1)
-        this.$router.push({ name: 'project', params: { projectId: this.projects[this.projIndex + 1].id }})
+      if (this.pageIndex < this.pages.length - 1)
+        this.$router.push({ name: 'page', params: { pageId: this.pages[this.pageIndex + 1].id }})
       else
         this.$router.push('/')
     }

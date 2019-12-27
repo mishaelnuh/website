@@ -5,6 +5,6 @@ SpeckleProcessor is an extention to the web admin application of the [Speckle](h
 
 SpeckleProcessor can be tested in the [app.speckle.systems](https://app.speckle.systems) deployment of SpeckleAdmin.
 
-![image-test](/project/speckleprocessor/flow.png)
-![image-test](/project/speckleprocessor/example-output.jpg)
-![image-test](/project/speckleprocessor/example.gif)
+![image-test](/page/speckleprocessor/flow.png)
+![image-test](/page/speckleprocessor/example-output.jpg)
+![image-test](/page/speckleprocessor/example.gif)
