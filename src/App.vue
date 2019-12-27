@@ -21,6 +21,13 @@
         <router-view :key="$route.fullPath"></router-view>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col style="text-align:center;">
+          <div style="padding-top: 20px;">
+          <p><font-awesome-icon icon="copyright"/> 2019 Mishael Nuh</p>
+          </div>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>

@@ -23,8 +23,8 @@
         <b-col md='1'>
         </b-col>
         <b-col md='10'>
-          <a @click="goToPrev" style="color: black; cursor: pointer; margin-right: 20px;">&lt; previous</a>
-          <a @click="goToNext" style="color: black; cursor: pointer;">next &gt;</a>
+          <a @click="goToPrev" style="color: #333333; cursor: pointer; margin-right: 20px;">&lt; previous</a>
+          <a @click="goToNext" style="color: #333333; cursor: pointer;">next &gt;</a>
         </b-col>
       </b-row>
     </b-container>
