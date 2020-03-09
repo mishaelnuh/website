@@ -1,72 +1,79 @@
 [
-{
-  "id": "rodsteward-gh",
-  "title": "RodSteward-GH",
-  "shortDesc": "Generating structures using standard rods and 3D printed connections",
-  "image": "/page/rodsteward-gh/banner.png",
-  "content": "/page/rodsteward-gh/content.md"
-},
-{
-  "id": "specklemeetup",
-  "title": "Speckle Community Meetup",
-  "shortDesc": "Presented at the Speckle Community Meetup 2019 in London, UK",
-  "image": "/page/specklemeetup/banner.png",
-  "content": "/page/specklemeetup/content.md"
-},
-{
-  "id": "speckleexcel",
-  "title": "SpeckleExcel",
-  "shortDesc": "Speckle client for Microsoft Excel",
-  "image": "/page/speckleexcel/banner.png",
-  "content": "/page/speckleexcel/content.md"
-},
-{
-  "id": "speckleprocessor",
-  "title": "SpeckleProcessor",
-  "shortDesc": "Perform calculations on Speckle data from the web",
-  "image": "/page/speckleprocessor/banner.png",
-  "content": "/page/speckleprocessor/content.md"
-},
-{
-  "id": "ccm",
-  "title": "Canadian Canoe Museum",
-  "shortDesc": "Structural design as part of Arup",
-  "image": "/page/ccm/banner.png",
-  "content": "/page/ccm/content.md"
-},
-{
-  "id": "gtaa",
-  "title": "Greater Toronto Pearson Airport",
-  "shortDesc": "Structural design of expansions and retrofits as part of Arup",
-  "image": "/page/gtaa/banner.png",
-  "content": "/page/gtaa/content.md"
-},
-{
-  "id": "cstx",
-  "title": "Finite Element Modelling of Large Reinforced Concrete Structures Using the Novel Hybrid Panel Truss Element",
-  "shortDesc": "Computers and Structures 2018",
-  "image": "/page/cstx/banner.png",
-  "content": "/page/cstx/content.md"
-},
-{
-  "id": "magnetawan",
-  "title": "Magnetawan Bridge Design",
-  "shortDesc": "Design of a prestressed concrete bridge for coursework",
-  "image": "/page/magnetawan/banner.png",
-  "content": "/page/magnetawan/content.md"
-},
-{
-  "id": "vt4",
-  "title": "VecTor4 x GiD",
-  "shortDesc": "Using GiD pre and post-processor with VecTor4",
-  "image": "/page/vt4/banner.png",
-  "content": "/page/vt4/content.md"
-},
-{
-  "id": "hypt",
-  "title": "Verification of a Novel 2D Finite Element for Reinforced and Prestressed Concrete",
-  "shortDesc": "American Concrete Institute Conference Spring 2017",
-  "image": "/page/hypt/banner.png",
-  "content": "/page/hypt/content.md"
-}
+  {
+    "id": "stadium",
+    "title": "Stadium Design",
+    "shortDesc": "Design of a FIFA football stadium",
+    "image": "/page/stadium/banner.png",
+    "content": "/page/stadium/content.md"
+  },
+  {
+    "id": "rodsteward-gh",
+    "title": "RodSteward-GH",
+    "shortDesc": "Generating structures using standard rods and 3D printed connections",
+    "image": "/page/rodsteward-gh/banner.png",
+    "content": "/page/rodsteward-gh/content.md"
+  },
+  {
+    "id": "specklemeetup",
+    "title": "Speckle Community Meetup",
+    "shortDesc": "Presented at the Speckle Community Meetup 2019 in London, UK",
+    "image": "/page/specklemeetup/banner.png",
+    "content": "/page/specklemeetup/content.md"
+  },
+  {
+    "id": "speckleexcel",
+    "title": "SpeckleExcel",
+    "shortDesc": "Speckle client for Microsoft Excel",
+    "image": "/page/speckleexcel/banner.png",
+    "content": "/page/speckleexcel/content.md"
+  },
+  {
+    "id": "speckleprocessor",
+    "title": "SpeckleProcessor",
+    "shortDesc": "Perform calculations on Speckle data from the web",
+    "image": "/page/speckleprocessor/banner.png",
+    "content": "/page/speckleprocessor/content.md"
+  },
+  {
+    "id": "ccm",
+    "title": "Canadian Canoe Museum",
+    "shortDesc": "Structural design as part of Arup",
+    "image": "/page/ccm/banner.png",
+    "content": "/page/ccm/content.md"
+  },
+  {
+    "id": "gtaa",
+    "title": "Greater Toronto Pearson Airport",
+    "shortDesc": "Structural design of expansions and retrofits as part of Arup",
+    "image": "/page/gtaa/banner.png",
+    "content": "/page/gtaa/content.md"
+  },
+  {
+    "id": "cstx",
+    "title": "Finite Element Modelling of Large Reinforced Concrete Structures Using the Novel Hybrid Panel Truss Element",
+    "shortDesc": "Computers and Structures 2018",
+    "image": "/page/cstx/banner.png",
+    "content": "/page/cstx/content.md"
+  },
+  {
+    "id": "magnetawan",
+    "title": "Magnetawan Bridge Design",
+    "shortDesc": "Design of a prestressed concrete bridge for coursework",
+    "image": "/page/magnetawan/banner.png",
+    "content": "/page/magnetawan/content.md"
+  },
+  {
+    "id": "vt4",
+    "title": "VecTor4 x GiD",
+    "shortDesc": "Using GiD pre and post-processor with VecTor4",
+    "image": "/page/vt4/banner.png",
+    "content": "/page/vt4/content.md"
+  },
+  {
+    "id": "hypt",
+    "title": "Verification of a Novel 2D Finite Element for Reinforced and Prestressed Concrete",
+    "shortDesc": "American Concrete Institute Conference Spring 2017",
+    "image": "/page/hypt/banner.png",
+    "content": "/page/hypt/content.md"
+  }
 ]

@@ -24,7 +24,7 @@
       <b-row>
         <b-col style="text-align:center;">
           <div style="padding-top: 20px;">
-          <p><font-awesome-icon icon="copyright"/> 2019 Mishael Nuh</p>
+          <p><font-awesome-icon icon="copyright"/> 2020 Mishael Nuh</p>
           </div>
         </b-col>
       </b-row>
