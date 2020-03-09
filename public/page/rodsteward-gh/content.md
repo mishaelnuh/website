@@ -10,5 +10,6 @@ RodSteward-GH is also able to help users assemble the structure by providing seq
 Further work is planned to investigate constructability, structural stability, as well as posibilities for integration with AR/VR.
 
 ![image-test](/page/rodsteward-gh/gh-script.png)
-![image-test](/page/rodsteward-gh/joint-stl.png)
-![image-test](/page/rodsteward-gh/example.png)
+![image-test](/page/rodsteward-gh/shelter.png)
+![image-test](/page/rodsteward-gh/pyramid.png)
+![image-test](/page/rodsteward-gh/structure.png)
