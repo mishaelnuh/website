@@ -1,6 +1,6 @@
 <template>
   <div v-if="page">
-    <b-row>
+    <b-row no-gutters>
       <b-col>
         <div class="sticky-top" style="text-align: left; background-color: white; padding: 30px 0; border-bottom: 3px solid #007bff;">
           <h2>{{page.title}}</h2>

@@ -17,10 +17,8 @@
                   <font-awesome-icon icon="dog"/> dog lover
                 <br/>
                 <br/>
-                <a style="color: #333333;" href="https://twitter.com/MishaelNuh"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" /></a>   
-                &nbsp;
-                <a style="color: #333333;" href="https://www.linkedin.com/in/mishaelnuh/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a> 
-                &nbsp;
+                <a style="color: #333333; margin-right: 8px;" href="https://twitter.com/MishaelNuh"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" /></a>   
+                <a style="color: #333333; margin-right: 8px;" href="https://www.linkedin.com/in/mishaelnuh/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a> 
                 <a style="color: #333333;" href="mailto:mishael.ebel.nuh@gmail.com"><font-awesome-icon icon="envelope"/></a>
               </p>
             </b-card-text>
