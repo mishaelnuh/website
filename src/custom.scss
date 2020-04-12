@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-  background: #fafafa !important;
+  background: white !important;
 }
 
 *:focus {
@@ -18,21 +18,34 @@ body {
 
 * {
   border-radius: 0 !important;
+  font-size: 13px !important;
 }
 
-h3 {
-  font-size: 14px !important;
+h1 {
+  font-size: 30px !important;
+  font-weight: bold !important;
+  color: #007bff;
+}
+
+h2 {
+  font-size: 20px !important;
   font-weight: bold !important;
 }
 
-.card {
+h3 {
+  font-size: 18px !important;
+}
+
+.hoverCard {
   transition: 0.3s;
 }
 
-.card:hover {
+.hoverCard:hover {
   cursor: pointer;
-  background-color: #eeeeee;
+  border-color: #007bff;
+  color: #007bff;
 }
+
 
 #markdown {
   text-align: left;

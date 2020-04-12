@@ -1,33 +1,19 @@
 <template>
   <div v-if="page">
-    <b-container>
-      <b-row>
-        <b-col md='1'>
-        </b-col>
-        <b-col md='10'>
-          <div mb-5>
-            <h2 style="text-align: left;">{{page.title}}</h2>
-          </div>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col md='1'>
-        </b-col>
-        <b-col md='10'>
-          <br>
-          <div id="markdown" v-html="markdownContent">
-          </div>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col md='1'>
-        </b-col>
-        <b-col md='10'>
-          <a @click="goToPrev" style="color: #333333; cursor: pointer; margin-right: 20px;">&lt; previous</a>
-          <a @click="goToNext" style="color: #333333; cursor: pointer;">next &gt;</a>
-        </b-col>
-      </b-row>
-    </b-container>
+    <b-row>
+      <b-col>
+        <div class="sticky-top" style="text-align: left; background-color: white; padding: 30px 0; border-bottom: 3px solid #007bff;">
+          <h2>{{page.title}}</h2>
+          <br/>
+          <a href="#/" style="color: #333333; cursor: pointer; margin-right: 20px;"><font-awesome-icon icon="home"/></a>
+          <a @click="goToPrev" style="color: #333333; cursor: pointer; margin-right: 20px;"><font-awesome-icon icon="arrow-left"/></a>
+          <a @click="goToNext" style="color: #333333; cursor: pointer;"><font-awesome-icon icon="arrow-right"/></a>
+        </div>
+        <br>
+        <div id="markdown" v-html="markdownContent">
+        </div>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
