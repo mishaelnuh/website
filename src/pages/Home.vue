@@ -78,6 +78,14 @@ export default {
   updated() {
   },
   mounted() {
+    this.pathLocation = []
+    this.pathVelocity = []
+
+    for (let i = 0; i <= 10; i++) {
+      this.pathLocation.push(Math.random() * this.canvasHeight)
+      this.pathVelocity.push(Math.random() * 2 - 1)
+    }
+
     paper.install(window)
     this.intervalHandler = setInterval(this.updateCanvas, 10)
     window.addEventListener('resize', this.initCanvas)
@@ -106,12 +114,8 @@ export default {
         this.paperPath.fillColor = primaryColor;
 
         this.paperPath.segments = []
-        this.pathLocation = []
-        this.pathVelocity = []
         this.paperPath.add(new paper.Point(0, 0))
         for (let i = 0; i <= 10; i++) {
-          this.pathLocation.push(Math.random() * this.canvasHeight)
-          this.pathVelocity.push(Math.random() * 2 - 1)
           this.paperPath.add(new paper.Point(i * this.canvasWidth / 10, this.pathLocation[i]))
         }
         this.paperPath.add(new paper.Point(this.canvasWidth, 0))
