@@ -1,25 +1,26 @@
 <template>
   <div>
     <b-row no-gutters>
-      <b-col>
-        <div class="homeHeader">
-          <b-row class="justify-content-md-center">
-            <b-col md="8" xl="6">
-              <h1>Mishael Nuh</h1>
-              <p>
-                Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
-                <br/>
-                <br/>
-                <font-awesome-icon icon="globe-americas"/> Toronto, Canada
-                <br/>
-                  <font-awesome-icon icon="coffee"/> coffee addict | 
-                  <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
-                  <font-awesome-icon icon="dog"/> dog lover
-                <br/>
-                <br/>
-              </p>
-            </b-col>
-          </b-row>
+      <b-col id="canvasSizer">
+        <div id="homeHeader">
+          <div>
+            <b-row no-gutters class="justify-content-md-center mt-5 mb-5 ml-3 mr-3">
+              <b-col md="8" xl="6">
+                <h1>Mishael Nuh</h1>
+                <p>
+                  Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
+                  <br/>
+                  <br/>
+                  <font-awesome-icon icon="globe-americas"/> Toronto, Canada
+                  <br/>
+                    <font-awesome-icon icon="coffee"/> coffee addict | 
+                    <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
+                    <font-awesome-icon icon="dog"/> dog lover
+                </p>
+              </b-col>
+            </b-row>
+          </div>
+          <canvas id="headerCanvas" resize="true"></canvas>
         </div>
       </b-col>
     </b-row>
@@ -40,12 +41,23 @@
 
 <script>
 import pageData from "../data/pages.json";
+import paper from "paper"
 
 export default {
   name: "Home",
   data() {
     return {
       pages: pageData,
+      paperPath: null,
+      intervalHandler: null,
+      pathLocation: [],
+      pathVelocity: [],
+      canvasWidth: 0,
+      canvasHeight: 0,
+      c_x: 500.0,
+      c_y: 5.0,
+      v_x: 0.1,
+      v_y: 0.1,
     };
   },
   computed: {
@@ -61,11 +73,72 @@ export default {
       return grouped
     },
   },
-  mounted() {},
+  created () {
+  },  
+  updated() {
+  },
+  mounted() {
+    paper.install(window)
+    this.intervalHandler = setInterval(this.updateCanvas, 10)
+    window.addEventListener('resize', this.initCanvas)
+    this.initCanvas()
+  },
   methods: {
     clickPage(page) {
       this.$router.push('/page/' + page.id)
     },
+    initCanvas() {
+      let canvasSizer = document.getElementById('canvasSizer')
+
+      document.getElementById('headerCanvas').width = canvasSizer.offsetWidth / 2
+      document.getElementById('headerCanvas').height = canvasSizer.offsetHeight / 2
+      this.canvasWidth = canvasSizer.offsetWidth
+      this.canvasHeight = canvasSizer.offsetHeight
+
+      clearInterval(this.intervalHandler)
+
+      this.$nextTick(() => {
+        paper.setup(document.getElementById('headerCanvas'))
+        var style = getComputedStyle(document.body)
+        var primaryColor = style.getPropertyValue('--secondary')
+
+        this.paperPath = new paper.Path();
+        this.paperPath.fillColor = primaryColor;
+
+        this.paperPath.segments = []
+        this.pathLocation = []
+        this.pathVelocity = []
+        this.paperPath.add(new paper.Point(0, 0))
+        for (let i = 0; i <= 10; i++) {
+          this.pathLocation.push(Math.random() * this.canvasHeight)
+          this.pathVelocity.push(Math.random() * 2 - 1)
+          this.paperPath.add(new paper.Point(i * this.canvasWidth / 10, this.pathLocation[i]))
+        }
+        this.paperPath.add(new paper.Point(this.canvasWidth, 0))
+        this.paperPath.smooth({ type: 'continuous' })
+
+        this.intervalHandler = setInterval(this.updateCanvas, 10)
+      })
+    },
+    updateCanvas() {
+      this.paperPath.segments = [];
+      this.paperPath.add(new paper.Point(0, this.canvasHeight))
+      for (let i = 0; i <= 10; i++) {
+        this.pathLocation[i] += this.pathVelocity[i]
+        if (this.pathLocation[i] < 0)
+        {
+          this.pathLocation[i] = 0
+          this.pathVelocity[i] *= -1
+        } else if (this.pathLocation[i] > this.canvasHeight)
+        {
+          this.pathLocation[i] = this.canvasHeight
+          this.pathVelocity[i] *= -1
+        }
+        this.paperPath.add(new paper.Point(i * this.canvasWidth / 10, this.pathLocation[i]))
+      }
+      this.paperPath.add(new paper.Point(this.canvasWidth, this.canvasHeight))
+      this.paperPath.smooth({ type: 'continuous' })
+    }
   }
 };
 </script>

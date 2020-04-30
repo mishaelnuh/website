@@ -1,9 +1,9 @@
 <template>
   <div v-if="page">
     <b-container>
-      <b-row no-gutters>
+      <b-row no-gutters class="mt-5">
         <b-col>
-          <div class="pageHeader">
+          <div id="pageHeader">
             <h2>{{page.title}}</h2>
             <br/>
             <a class="pageNavIcon" @click="goToPrev"><font-awesome-icon icon="arrow-left"/></a>

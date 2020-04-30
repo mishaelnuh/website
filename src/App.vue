@@ -9,7 +9,7 @@
         <b-nav-item href="mailto:mishael.ebel.nuh@gmail.com"><font-awesome-icon icon="envelope"/></b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <b-container fluid="true" class="mt-5">
+    <b-container fluid="true">
       <b-row no-gutters>
         <b-col>
           <router-view :key="$route.fullPath"></router-view>
