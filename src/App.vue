@@ -10,12 +10,12 @@
       </b-navbar-nav>
     </b-navbar>
     <b-container fluid="true" class="mt-5">
-      <b-row>
+      <b-row no-gutters>
         <b-col>
           <router-view :key="$route.fullPath"></router-view>
         </b-col>
       </b-row>
-      <b-row>
+      <b-row no-gutters>
         <b-col>
           <div class="footer">
             <p><font-awesome-icon icon="copyright"/> 2020 Mishael Nuh</p>

@@ -1,21 +1,25 @@
 <template>
   <div>
     <b-row no-gutters>
-      <b-col xs="12">
+      <b-col>
         <div class="homeHeader">
-          <h1>Mishael Nuh</h1>
-          <p>
-            Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
-            <br/>
-            <br/>
-            <font-awesome-icon icon="globe-americas"/> Toronto, Canada
-            <br/>
-              <font-awesome-icon icon="coffee"/> coffee addict | 
-              <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
-              <font-awesome-icon icon="dog"/> dog lover
-            <br/>
-            <br/>
-          </p>
+          <b-row class="justify-content-md-center">
+            <b-col md="8" xl="6">
+              <h1>Mishael Nuh</h1>
+              <p>
+                Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
+                <br/>
+                <br/>
+                <font-awesome-icon icon="globe-americas"/> Toronto, Canada
+                <br/>
+                  <font-awesome-icon icon="coffee"/> coffee addict | 
+                  <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
+                  <font-awesome-icon icon="dog"/> dog lover
+                <br/>
+                <br/>
+              </p>
+            </b-col>
+          </b-row>
         </div>
       </b-col>
     </b-row>
