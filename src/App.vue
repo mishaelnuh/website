@@ -9,15 +9,17 @@
         <b-nav-item href="mailto:mishael.ebel.nuh@gmail.com"><font-awesome-icon icon="envelope"/></b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <b-container fluid="xl" class="mt-5">
+    <b-container fluid="true" class="mt-5">
       <b-row>
         <b-col>
           <router-view :key="$route.fullPath"></router-view>
         </b-col>
       </b-row>
-      <b-row class="mt-2">
-        <b-col style="text-align: right;">
-          <p><font-awesome-icon icon="copyright"/> 2020 Mishael Nuh</p>
+      <b-row>
+        <b-col>
+          <div class="footer">
+            <p><font-awesome-icon icon="copyright"/> 2020 Mishael Nuh</p>
+          </div>
         </b-col>
       </b-row>
     </b-container>

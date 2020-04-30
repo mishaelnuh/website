@@ -2,8 +2,8 @@
 
 $theme-colors: (
   "primary":    #7B9AD1,
-  "secondary":  #B5E8FC,
-  "light":      #F2F7FA,
+  "secondary":  #D2E5F3,
+  "light":      #EDF1F6,
   "dark":       #465B6B,
   "text":       #465B6B,
 );
@@ -60,8 +60,16 @@ h3 {
   color: theme-color("dark") !important;
 }
 
+.footer {
+  text-align: center;
+  border-top: 1px solid theme-color("primary");
+  padding-top: 20px;
+}
+
 .hoverCard {
   transition: 0.3s;
+  border: 0px solid;
+  border-color: color("white");
   background-color: color("white");
 }
 
@@ -69,11 +77,11 @@ h3 {
   cursor: pointer;
   border-color: theme-color("primary");
   background-color: theme-color("light");
-  color: theme-color("primary");
 }
 
 .homeHeader {
-  margin: 40px 40px 40px 40px;
+  padding: 40px 40px 40px 40px;
+  border-bottom: 1px solid theme-color("primary");
 }
 
 .pageHeader {
@@ -81,7 +89,6 @@ h3 {
   padding: 0 0 30px 0;
   margin-bottom: 30px;
   border-bottom: 1px solid theme-color("primary");
-  color: theme-color("text");
 }
 
 .pageNavIcon {
