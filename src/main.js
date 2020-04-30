@@ -9,7 +9,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './custom.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faCoffee, faPenFancy, faDog, faGlobeAmericas, faCopyright, faHome, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -23,6 +23,7 @@ library.add(faPenFancy)
 library.add(faDog)
 library.add(faTwitter)
 library.add(faLinkedin)
+library.add(faGithub)
 library.add(faEnvelope)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

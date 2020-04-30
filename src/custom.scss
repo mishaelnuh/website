@@ -1,15 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
+$theme-colors: (
+  "primary":    #7B9AD1,
+  "secondary":  #B5E8FC,
+  "light":      #F2F7FA,
+  "dark":       #465B6B,
+  "text":       #465B6B,
+);
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
 html, body {
   font-family: 'Bitter', serif;
 }
 
 #app {
   font-family: 'Bitter', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: theme-color("text");
 }
 
 body {
-  background: white !important;
+  background: color("white");
 }
 
 *:focus {
@@ -24,7 +38,6 @@ body {
 h1 {
   font-size: 30px !important;
   font-weight: bold !important;
-  color: #007bff;
 }
 
 h2 {
@@ -36,16 +49,46 @@ h3 {
   font-size: 18px !important;
 }
 
+.navbar {
+  border-bottom: 1px solid theme-color("primary");
+  background-color: color("white");
+  height: 60px;
+}
+
+.navbar-brand {
+  font-size: 20px !important;
+  color: theme-color("dark") !important;
+}
+
 .hoverCard {
   transition: 0.3s;
+  background-color: color("white");
 }
 
 .hoverCard:hover {
   cursor: pointer;
-  border-color: #007bff;
-  color: #007bff;
+  border-color: theme-color("primary");
+  background-color: theme-color("light");
+  color: theme-color("primary");
 }
 
+.homeHeader {
+  margin: 40px 40px 40px 40px;
+}
+
+.pageHeader {
+  text-align: left;
+  padding: 0 0 30px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid theme-color("primary");
+  color: theme-color("text");
+}
+
+.pageNavIcon {
+  cursor: pointer;
+  margin-right: 20px;
+  color: theme-color("text");
+}
 
 #markdown {
   text-align: left;
@@ -54,8 +97,5 @@ h3 {
 #markdown img {
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid theme-color("primary");
 }
-
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap-vue/src/index.scss';

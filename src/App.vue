@@ -1,7 +1,16 @@
 <template>
   <div id="app">
-    <b-container fluid="xl" class="mt-3">
-      <b-row class="mt-5">
+    <b-navbar class="sticky-top navbar-expand">
+      <b-navbar-brand href="#/">mishael nuh</b-navbar-brand>
+      <b-navbar-nav :fill="true" class="ml-auto">
+        <b-nav-item href="https://twitter.com/MishaelNuh"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" /></b-nav-item>
+        <b-nav-item href="https://www.linkedin.com/in/mishaelnuh/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></b-nav-item>
+        <b-nav-item href="https://github.com/mishaelnuh/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></b-nav-item>
+        <b-nav-item href="mailto:mishael.ebel.nuh@gmail.com"><font-awesome-icon icon="envelope"/></b-nav-item>
+      </b-navbar-nav>
+    </b-navbar>
+    <b-container fluid="xl" class="mt-5">
+      <b-row>
         <b-col>
           <router-view :key="$route.fullPath"></router-view>
         </b-col>
@@ -22,13 +31,3 @@ export default {
   },
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>

@@ -2,15 +2,25 @@
   <div v-if="page">
     <b-row no-gutters>
       <b-col>
-        <div class="sticky-top" style="text-align: left; background-color: white; padding: 30px 0; border-bottom: 3px solid #007bff;">
+        <div class="pageHeader">
           <h2>{{page.title}}</h2>
           <br/>
-          <a href="#/" style="color: #333333; cursor: pointer; margin-right: 20px;"><font-awesome-icon icon="home"/></a>
-          <a @click="goToPrev" style="color: #333333; cursor: pointer; margin-right: 20px;"><font-awesome-icon icon="arrow-left"/></a>
-          <a @click="goToNext" style="color: #333333; cursor: pointer;"><font-awesome-icon icon="arrow-right"/></a>
+          <a class="pageNavIcon" @click="goToPrev"><font-awesome-icon icon="arrow-left"/></a>
+          <a class="pageNavIcon" @click="goToNext"><font-awesome-icon icon="arrow-right"/></a>
         </div>
-        <br>
+      </b-col>
+    </b-row>
+    <b-row no-gutters>
+      <b-col>
         <div id="markdown" v-html="markdownContent">
+        </div>
+      </b-col>
+    </b-row>
+    <b-row no-gutters>
+      <b-col>
+        <div>
+          <a class="pageNavIcon" href="#" @click="goToPrev"><font-awesome-icon icon="arrow-left"/></a>
+          <a class="pageNavIcon" href="#" @click="goToNext"><font-awesome-icon icon="arrow-right"/></a>
         </div>
       </b-col>
     </b-row>

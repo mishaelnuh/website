@@ -1,31 +1,24 @@
 <template>
   <div>
     <b-row no-gutters>
-      <b-col md="12" lg="8" xl="8" style="padding: 5px;">
-        <b-card border-variant="primary" class="overflow-hidden" style="height: 100%;">
-          <b-card-body style="text-align: left;">
-            <b-card-text>
-              <h1>Mishael Nuh</h1>
-              <p>
-                Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering.
-                <br/>
-                <br/>
-                <font-awesome-icon icon="globe-americas"/> Toronto, Canada
-                <br/>
-                  <font-awesome-icon icon="coffee"/> coffee addict | 
-                  <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
-                  <font-awesome-icon icon="dog"/> dog lover
-                <br/>
-                <br/>
-                <a style="color: #333333; margin-right: 8px;" href="https://twitter.com/MishaelNuh"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" /></a>   
-                <a style="color: #333333; margin-right: 8px;" href="https://www.linkedin.com/in/mishaelnuh/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a> 
-                <a style="color: #333333;" href="mailto:mishael.ebel.nuh@gmail.com"><font-awesome-icon icon="envelope"/></a>
-              </p>
-            </b-card-text>
-          </b-card-body>
-        </b-card>
+      <b-col class="homeHeader" xs="12">
+        <h1>Mishael Nuh</h1>
+        <p>
+          Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
+          <br/>
+          <br/>
+          <font-awesome-icon icon="globe-americas"/> Toronto, Canada
+          <br/>
+            <font-awesome-icon icon="coffee"/> coffee addict | 
+            <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
+            <font-awesome-icon icon="dog"/> dog lover
+          <br/>
+          <br/>
+        </p>
       </b-col>
-      <b-col md="6" lg="4" xl="4" v-for="p in pages" :key="p.id" style="padding: 5px;">
+    </b-row>
+    <b-row no-gutters>
+      <b-col md="6" lg="4" xl="4" v-for="p in pages" :key="p.id" style="padding: 5px">
           <b-card class="hoverCard" style="height: 100%;" img-bottom :img-src="p.image" @click="clickPage(p)">
             <b-card-body style="text-align: left;">
               <b-card-text>
