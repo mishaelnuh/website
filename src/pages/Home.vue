@@ -54,10 +54,7 @@ export default {
       pathVelocity: [],
       canvasWidth: 0,
       canvasHeight: 0,
-      c_x: 500.0,
-      c_y: 5.0,
-      v_x: 0.1,
-      v_y: 0.1,
+      numPoints: 5,
     };
   },
   computed: {
@@ -74,22 +71,21 @@ export default {
     },
   },
   created () {
-  },  
-  updated() {
   },
   mounted() {
     this.pathLocation = []
     this.pathVelocity = []
 
-    for (let i = 0; i <= 10; i++) {
-      this.pathLocation.push(Math.random() * this.canvasHeight)
-      this.pathVelocity.push(Math.random() * 2 - 1)
+    for (let i = 0; i <= this.numPoints; i++) {
+      this.pathLocation.push(0)
+      this.pathVelocity.push(Math.random())
     }
 
     paper.install(window)
-    this.intervalHandler = setInterval(this.updateCanvas, 10)
     window.addEventListener('resize', this.initCanvas)
     this.initCanvas()
+  },
+  updated() {
   },
   methods: {
     clickPage(page) {
@@ -97,7 +93,7 @@ export default {
     },
     initCanvas() {
       let canvasSizer = document.getElementById('canvasSizer')
-
+        
       document.getElementById('headerCanvas').width = canvasSizer.offsetWidth / 2
       document.getElementById('headerCanvas').height = canvasSizer.offsetHeight / 2
       this.canvasWidth = canvasSizer.offsetWidth
@@ -115,19 +111,19 @@ export default {
 
         this.paperPath.segments = []
         this.paperPath.add(new paper.Point(0, 0))
-        for (let i = 0; i <= 10; i++) {
-          this.paperPath.add(new paper.Point(i * this.canvasWidth / 10, this.pathLocation[i]))
+        for (let i = 0; i <= this.numPoints; i++) {
+          this.paperPath.add(new paper.Point(i * this.canvasWidth / this.numPoints, this.pathLocation[i]))
         }
         this.paperPath.add(new paper.Point(this.canvasWidth, 0))
         this.paperPath.smooth({ type: 'continuous' })
 
-        this.intervalHandler = setInterval(this.updateCanvas, 10)
+        this.intervalHandler = setInterval(this.updateCanvas, 30)
       })
     },
     updateCanvas() {
       this.paperPath.segments = [];
-      this.paperPath.add(new paper.Point(0, this.canvasHeight))
-      for (let i = 0; i <= 10; i++) {
+      this.paperPath.add(new paper.Point(0, 0))
+      for (let i = 0; i <= this.numPoints; i++) {
         this.pathLocation[i] += this.pathVelocity[i]
         if (this.pathLocation[i] < 0)
         {
@@ -138,10 +134,11 @@ export default {
           this.pathLocation[i] = this.canvasHeight
           this.pathVelocity[i] *= -1
         }
-        this.paperPath.add(new paper.Point(i * this.canvasWidth / 10, this.pathLocation[i]))
+        this.paperPath.add(new paper.Point(i * this.canvasWidth / this.numPoints, this.pathLocation[i]))
       }
-      this.paperPath.add(new paper.Point(this.canvasWidth, this.canvasHeight))
+      this.paperPath.add(new paper.Point(this.canvasWidth, 0))
       this.paperPath.smooth({ type: 'continuous' })
+      this.$forceUpdate()
     }
   }
 };
