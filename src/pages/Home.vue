@@ -117,6 +117,7 @@ export default {
         this.paperPath.add(new paper.Point(this.canvasWidth, 0))
         this.paperPath.smooth({ type: 'continuous' })
 
+        clearInterval(this.intervalHandler)
         this.intervalHandler = setInterval(this.updateCanvas, 30)
       })
     },
@@ -138,7 +139,6 @@ export default {
       }
       this.paperPath.add(new paper.Point(this.canvasWidth, 0))
       this.paperPath.smooth({ type: 'continuous' })
-      this.$forceUpdate()
     }
   }
 };
