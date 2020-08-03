@@ -4,7 +4,8 @@
       <b-row no-gutters class="mt-5">
         <b-col>
           <div id="pageHeader">
-            <h2>{{page.title}}</h2>
+            <h1>{{page.title}}</h1>
+            <br/>
             <br/>
             <a class="pageNavIcon" @click="goToPrev"><font-awesome-icon icon="arrow-left"/></a>
             <a class="pageNavIcon" @click="goToNext"><font-awesome-icon icon="arrow-right"/></a>

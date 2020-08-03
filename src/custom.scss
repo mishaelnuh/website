@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
 $theme-colors: (
-  "primary":    #7B9AD1,
+  "primary":    #465B6B,
   "secondary":  #D2E5F3,
   "light":      #EDF1F6,
   "dark":       #465B6B,
   "text":       #465B6B,
+  "highlight":  #00FFFF,
 );
 
 @import 'node_modules/bootstrap/scss/bootstrap';
@@ -36,8 +37,10 @@ body {
 }
 
 h1 {
+  display: inline-block;
   font-size: 30px !important;
   font-weight: bold !important;
+  background: linear-gradient(180deg,rgba(255,255,255,0) 60%, theme-color('highlight') 40%);
 }
 
 h2 {
@@ -50,7 +53,6 @@ h3 {
 }
 
 .navbar {
-  border-bottom: 1px solid theme-color("primary");
   background-color: color("white");
   height: 60px;
 }
@@ -62,42 +64,44 @@ h3 {
 
 .footer {
   text-align: center;
-  border-top: 1px solid theme-color("primary");
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .hoverCard {
   transition: 0.3s;
-  border: 0px solid;
-  border-color: color("white");
-  background-color: color("white");
+  border: 5px solid;
+  border-color: theme-color("light");
 }
 
 .hoverCard:hover {
   cursor: pointer;
-  border-color: theme-color("primary");
-  background-color: theme-color("light");
+  border-color: theme-color("dark");
 }
 
 #homeHeader {
-  border-bottom: 1px solid theme-color("primary");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: -1;
 }
 
-#headerCanvas {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+#homeHeaderContent {
+  background-color: color("white");
+  padding: 30px;
+  margin-top: -20vh;
+}
+
+#homeHeaderSpacer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 #pageHeader {
   text-align: left;
   padding: 0 0 30px 0;
-  margin-bottom: 30px;
-  border-bottom: 1px solid theme-color("primary");
 }
 
 .pageNavIcon {
@@ -111,7 +115,9 @@ h3 {
 }
 
 #markdown img {
+  display: flex;
   width: 100%;
+  margin: 0 auto;
   margin-bottom: 10px;
-  border: 1px solid theme-color("primary");
+  border: 1px solid color("dark");
 }

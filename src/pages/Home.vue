@@ -1,31 +1,31 @@
 <template>
   <div>
-    <b-row no-gutters>
-      <b-col id="canvasSizer">
-        <div id="homeHeader">
-          <div>
-            <b-row no-gutters class="justify-content-md-center mt-5 mb-5 ml-3 mr-3">
-              <b-col md="8" xl="6">
-                <h1>Mishael Nuh</h1>
-                <p>
-                  Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
-                  <br/>
-                  <br/>
-                  <font-awesome-icon icon="globe-americas"/> Toronto, Canada
-                  <br/>
-                    <font-awesome-icon icon="coffee"/> coffee addict | 
-                    <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
-                    <font-awesome-icon icon="dog"/> dog lover
-                </p>
-              </b-col>
-            </b-row>
-          </div>
-          <canvas id="headerCanvas" resize="true"></canvas>
+    <b-row no-gutters style="position: fixed" id="homeHeader" v-show="showHeader">
+      <b-col xs="10" sm="8" align-self="center">
+        <div id="homeHeaderContent">
+          <h1>mishael nuh</h1>
+          <p>
+            Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
+            <br/>
+            <br/>
+            <font-awesome-icon icon="globe-americas"/> Toronto, Canada
+            <br/>
+              <font-awesome-icon icon="coffee"/> coffee addict | 
+              <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
+              <font-awesome-icon icon="dog"/> dog lover
+          </p>
         </div>
       </b-col>
     </b-row>
+    <b-row no-gutters id="homeHeaderSpacer">
+    </b-row>
+    <b-row class="py-3 pl-5" ref="portfolioHeader" style="background-color: white;">
+      <b-col>
+        <h1>portfolio</h1>
+      </b-col>
+    </b-row>
     <b-row no-gutters>
-      <b-col md="6" lg="4" xl="4" v-for="p in pages" :key="p.id">
+      <b-col :md="p.width" v-for="p in filteredPages" :key="p.id">
           <b-card class="hoverCard" style="height: 100%;" img-bottom :img-src="p.image" @click="clickPage(p)">
             <b-card-body style="text-align: left;">
               <b-card-text>
@@ -41,49 +41,40 @@
 
 <script>
 import pageData from "../data/pages.json";
-import paper from "paper"
 
 export default {
   name: "Home",
   data() {
     return {
       pages: pageData,
-      paperPath: null,
-      intervalHandler: null,
-      pathLocation: [],
-      pathVelocity: [],
-      canvasWidth: 0,
-      canvasHeight: 0,
-      numPoints: 5,
+      showHeader: true,
     };
   },
   computed: {
-    groupedPages() {
-      let grouped = []
-      let start = 0
-      for (let i = start; i < this.pages.length; i += 3) {
-        if (i + 3 > this.pages.length)
-          grouped.push(this.pages.slice(i, i + this.pages.length % 3))
-        else
-          grouped.push(this.pages.slice(i, i + 3))
-      }
-      return grouped
-    },
+    filteredPages() {
+      var filteredPages = JSON.parse(JSON.stringify(this.pages))
+
+      var currAllowance = 12
+      const widthRange = [3, 5]
+
+      filteredPages.forEach((p, ) => {
+        p.width = Math.floor(Math.random()*(widthRange[1] - widthRange[0])) + widthRange[0]
+        if (currAllowance - p.width < widthRange[0]) {
+          p.width = currAllowance
+          currAllowance = 12
+        } else {
+          currAllowance -= p.width
+        }
+      })
+
+      return filteredPages
+    }
   },
   created () {
+    window.addEventListener('scroll', this.handleScroll);
   },
-  mounted() {
-    this.pathLocation = []
-    this.pathVelocity = []
-
-    for (let i = 0; i <= this.numPoints; i++) {
-      this.pathLocation.push(0)
-      this.pathVelocity.push(Math.random())
-    }
-
-    paper.install(window)
-    window.addEventListener('resize', this.initCanvas)
-    this.initCanvas()
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   updated() {
   },
@@ -91,54 +82,10 @@ export default {
     clickPage(page) {
       this.$router.push('/page/' + page.id)
     },
-    initCanvas() {
-      let canvasSizer = document.getElementById('canvasSizer')
-        
-      document.getElementById('headerCanvas').width = canvasSizer.offsetWidth / 2
-      document.getElementById('headerCanvas').height = canvasSizer.offsetHeight / 2
-      this.canvasWidth = canvasSizer.offsetWidth
-      this.canvasHeight = canvasSizer.offsetHeight
+    handleScroll () {
+      const portfolioTop = this.$refs.portfolioHeader.getBoundingClientRect().top
 
-      clearInterval(this.intervalHandler)
-
-      this.$nextTick(() => {
-        paper.setup(document.getElementById('headerCanvas'))
-        var style = getComputedStyle(document.body)
-        var primaryColor = style.getPropertyValue('--secondary')
-
-        this.paperPath = new paper.Path();
-        this.paperPath.fillColor = primaryColor;
-
-        this.paperPath.segments = []
-        this.paperPath.add(new paper.Point(0, 0))
-        for (let i = 0; i <= this.numPoints; i++) {
-          this.paperPath.add(new paper.Point(i * this.canvasWidth / this.numPoints, this.pathLocation[i]))
-        }
-        this.paperPath.add(new paper.Point(this.canvasWidth, 0))
-        this.paperPath.smooth({ type: 'continuous' })
-
-        clearInterval(this.intervalHandler)
-        this.intervalHandler = setInterval(this.updateCanvas, 30)
-      })
-    },
-    updateCanvas() {
-      this.paperPath.segments = [];
-      this.paperPath.add(new paper.Point(0, 0))
-      for (let i = 0; i <= this.numPoints; i++) {
-        this.pathLocation[i] += this.pathVelocity[i]
-        if (this.pathLocation[i] < 0)
-        {
-          this.pathLocation[i] = 0
-          this.pathVelocity[i] *= -1
-        } else if (this.pathLocation[i] > this.canvasHeight)
-        {
-          this.pathLocation[i] = this.canvasHeight
-          this.pathVelocity[i] *= -1
-        }
-        this.paperPath.add(new paper.Point(i * this.canvasWidth / this.numPoints, this.pathLocation[i]))
-      }
-      this.paperPath.add(new paper.Point(this.canvasWidth, 0))
-      this.paperPath.smooth({ type: 'continuous' })
+      this.showHeader = portfolioTop > 0
     }
   }
 };
