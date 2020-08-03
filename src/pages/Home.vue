@@ -35,8 +35,8 @@
         </div>
       </b-col>
     </b-row>
-    <b-row no-gutters id="portfolioSelectorContainer" ref="portfolioSelector">
-      <b-col>
+    <b-row no-gutters ref="portfolioSelector">
+      <b-col id="portfolioSelectorContainer">
         <b-row no-gutters id="portfolioSelector">
           <b-col :md="p.width" v-for="p in filteredPages" :key="p.id">
               <b-card class="hoverCard" style="height: 100%;" img-top :img-src="p.image" @click="clickPage(p)">
