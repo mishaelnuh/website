@@ -27,7 +27,7 @@
     </b-row>
     <b-row no-gutters id="homeHeaderSpacer">
     </b-row>
-    <b-row class="py-3 pl-5" ref="portfolioHeader">
+    <b-row class="py-3 pl-5" ref="portfolioHeader" style="background-color: white;">
       <b-col>
         <h1>portfolio</h1>
       </b-col>
