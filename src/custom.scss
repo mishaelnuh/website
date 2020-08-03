@@ -57,6 +57,13 @@ h3 {
   cursor: pointer;
 }
 
+@include media-breakpoint-down(xs) {
+  #filterContainer {
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+}
+
 .navbar {
   background-color: color("white");
   height: 60px;

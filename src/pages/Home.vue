@@ -30,7 +30,7 @@
     <b-row class="sticky-top" ref="portfolioHeader" id="portfolioHeader">
       <b-col>
         <h2>portfolio</h2>
-        <div>
+        <div id="filterContainer">
           <b-badge :variant="filteredTags.includes(t) ? 'highlight' : 'light'" v-for="t in tags" :key="t" class="mr-2 mb-2" @click="setTag(t)">{{t}}</b-badge>
         </div>
       </b-col>
@@ -109,7 +109,6 @@ export default {
   },
   created () {
     window.addEventListener('scroll', this.handleScroll);
-    this.setCardWidths();
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
