@@ -2,6 +2,11 @@
   {
     "id": "monstergenerator",
     "title": "Monster Card Generator",
+    "tags": [
+      "js",
+      "vue",
+      "frontend"
+    ],
     "shortDesc": "Generator monster cards using various APIs",
     "image": "/page/monstergenerator/banner.png",
     "content": "/page/monstergenerator/content.md"
@@ -9,6 +14,12 @@
   {
     "id": "stadium",
     "title": "Stadium Design",
+    "tags": [
+      "structural",
+      "coursework",
+      "university of toronto",
+      "grasshopper"
+    ],
     "shortDesc": "Design of a FIFA football stadium",
     "image": "/page/stadium/banner.png",
     "content": "/page/stadium/content.md"
@@ -16,6 +27,14 @@
   {
     "id": "rodsteward-gh",
     "title": "RodSteward-GH",
+    "tags": [
+      "structural",
+      "coursework",
+      "university of toronto",
+      "grasshopper",
+      "thesis",
+      "c#"
+    ],
     "shortDesc": "Generating structures using standard rods and 3D printed connections",
     "image": "/page/rodsteward-gh/banner.png",
     "content": "/page/rodsteward-gh/content.md"
@@ -23,6 +42,9 @@
   {
     "id": "specklemeetup",
     "title": "Speckle Community Meetup",
+    "tags": [
+      "speckle"
+    ],
     "shortDesc": "Presented at the Speckle Community Meetup 2019 in London, UK",
     "image": "/page/specklemeetup/banner.png",
     "content": "/page/specklemeetup/content.md"
@@ -30,6 +52,11 @@
   {
     "id": "speckleexcel",
     "title": "SpeckleExcel",
+    "tags": [
+      "speckle",
+      "excel",
+      "js"
+    ],
     "shortDesc": "Speckle client for Microsoft Excel",
     "image": "/page/speckleexcel/banner.png",
     "content": "/page/speckleexcel/content.md"
@@ -37,6 +64,14 @@
   {
     "id": "speckleprocessor",
     "title": "SpeckleProcessor",
+    "tags": [
+      "speckle",
+      "vue",
+      "js",
+      "netlify",
+      "lambda",
+      "frontend"
+    ],
     "shortDesc": "Perform calculations on Speckle data from the web",
     "image": "/page/speckleprocessor/banner.png",
     "content": "/page/speckleprocessor/content.md"
@@ -44,6 +79,13 @@
   {
     "id": "ccm",
     "title": "Canadian Canoe Museum",
+    "tags": [
+      "structural",
+      "arup",
+      "internship",
+      "etabs",
+      "revit"
+    ],
     "shortDesc": "Structural design as part of Arup",
     "image": "/page/ccm/banner.png",
     "content": "/page/ccm/content.md"
@@ -51,6 +93,13 @@
   {
     "id": "gtaa",
     "title": "Greater Toronto Pearson Airport",
+    "tags": [
+      "structural",
+      "arup",
+      "internship",
+      "etabs",
+      "revit"
+    ],
     "shortDesc": "Structural design of expansions and retrofits as part of Arup",
     "image": "/page/gtaa/banner.png",
     "content": "/page/gtaa/content.md"
@@ -58,6 +107,12 @@
   {
     "id": "cstx",
     "title": "Finite Element Modelling of Large Reinforced Concrete Structures Using the Novel Hybrid Panel Truss Element",
+    "tags": [
+      "structural",
+      "university of toronto",
+      "matlab",
+      "cstx"
+    ],
     "shortDesc": "Computers and Structures 2018",
     "image": "/page/cstx/banner.png",
     "content": "/page/cstx/content.md"
@@ -65,6 +120,12 @@
   {
     "id": "magnetawan",
     "title": "Magnetawan Bridge Design",
+    "tags": [
+      "structural",
+      "coursework",
+      "university of toronto",
+      "matlab"
+    ],
     "shortDesc": "Design of a prestressed concrete bridge for coursework",
     "image": "/page/magnetawan/banner.png",
     "content": "/page/magnetawan/content.md"
@@ -72,6 +133,11 @@
   {
     "id": "vt4",
     "title": "VecTor4 x GiD",
+    "tags": [
+      "structural",
+      "university of texas at austin",
+      "matlab"
+    ],
     "shortDesc": "Using GiD pre and post-processor with VecTor4",
     "image": "/page/vt4/banner.png",
     "content": "/page/vt4/content.md"
@@ -79,6 +145,11 @@
   {
     "id": "hypt",
     "title": "Verification of a Novel 2D Finite Element for Reinforced and Prestressed Concrete",
+    "tags": [
+      "structural",
+      "university of toronto",
+      "aci"
+    ],
     "shortDesc": "American Concrete Institute Conference Spring 2017",
     "image": "/page/hypt/banner.png",
     "content": "/page/hypt/content.md"

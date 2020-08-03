@@ -2,7 +2,7 @@
 
 $theme-colors: (
   "primary":    #465B6B,
-  "secondary":  #D2E5F3,
+  "secondary":  #EDF1F6,
   "light":      #EDF1F6,
   "dark":       #465B6B,
   "text":       #465B6B,
@@ -53,9 +53,14 @@ h3 {
   font-weight: bold;
 }
 
+.badge {
+  cursor: pointer;
+}
+
 .navbar {
   background-color: color("white");
   height: 60px;
+  z-index: 300;
 }
 
 .navbar-brand {
@@ -77,6 +82,7 @@ h3 {
 .hoverCard:hover {
   cursor: pointer;
   border-color: theme-color("dark");
+  transform: scale(0.97);
 }
 
 #homeHeader {
@@ -84,7 +90,8 @@ h3 {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  z-index: -1;
+  z-index: -10;
+  position: fixed;
 }
 
 #homeHeaderContent {
@@ -98,6 +105,13 @@ h3 {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+}
+
+#portfolioHeader {
+  background: color("white");
+  padding-top: 60px;
+  padding-bottom: 10px;
+  z-index: 1
 }
 
 #pageHeader {
