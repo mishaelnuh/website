@@ -14,12 +14,20 @@
               <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
               <font-awesome-icon icon="dog"/> dog lover
           </p>
+          <br/>
+          <div style="width: 100%; text-align: center; background-color: yellow;">
+          </div>
+        </div>
+        <div style="text-align: center;" class="mt-5">
+          <div class="chevron"></div>
+          <br/>
+          scroll
         </div>
       </b-col>
     </b-row>
     <b-row no-gutters id="homeHeaderSpacer">
     </b-row>
-    <b-row class="py-3 pl-5" ref="portfolioHeader" style="background-color: white;">
+    <b-row class="py-3 pl-5" ref="portfolioHeader">
       <b-col>
         <h1>portfolio</h1>
       </b-col>
