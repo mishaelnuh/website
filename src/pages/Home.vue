@@ -19,7 +19,7 @@
           </div>
         </div>
         <div style="text-align: center;" class="mt-5">
-          <div class="chevron"></div>
+          <div class="chevron" @click="$refs.portfolioHeader.scrollIntoView({behavior: 'smooth', block: 'start'})"></div>
           <br/>
           scroll
         </div>
@@ -35,9 +35,9 @@
         </div>
       </b-col>
     </b-row>
-    <b-row no-gutters style="background-color: white; min-height: 100vh;">
+    <b-row no-gutters id="portfolioSelectorContainer" ref="portfolioSelector">
       <b-col>
-        <b-row no-gutters>
+        <b-row no-gutters id="portfolioSelector">
           <b-col :md="p.width" v-for="p in filteredPages" :key="p.id">
               <b-card class="hoverCard" style="height: 100%;" img-top :img-src="p.image" @click="clickPage(p)">
                 <b-card-body style="text-align: left;">
@@ -52,6 +52,9 @@
                   
                 </b-card-body>
               </b-card>
+          </b-col>
+          <b-col v-if="filteredPages.length === 0" style="text-align: center;">
+            no matches
           </b-col>
         </b-row>
       </b-col>
@@ -135,6 +138,11 @@ export default {
         this.filteredTags.splice(this.filteredTags.indexOf(tag), 1)
       } else {
         this.filteredTags.push(tag)
+      }
+      const portfolioHeaderBounds = this.$refs.portfolioHeader.getBoundingClientRect()
+      if (portfolioHeaderBounds.top === 0) {
+        this.$refs.portfolioSelector.scrollIntoView(true)
+        window.scrollBy(0, - portfolioHeaderBounds.height + 1)
       }
     }
   }
