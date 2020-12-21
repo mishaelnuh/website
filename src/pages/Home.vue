@@ -5,10 +5,13 @@
         <div id="homeHeaderContent" ref="homeHeader">
           <h1>mishael nuh</h1>
           <p>
-            Hello there! I am an Engineering Science student majoring in Infrastructure Engineering at the University of Toronto interested in the interplay between digital technologies and structural engineering. This website is aimed at showcasing some of my work. Some of them are serious and others not so much.
+            Hello there! I am a PhD candidate in the Department of Engineering at the University of Cambridge under the supervision of Dr. John Orr, working on the reuse of concrete components. My interest lies in the application of optimisation and automation to concrete structures to minimise the embodied carbon of our built environment.
             <br/>
             <br/>
-            <font-awesome-icon icon="globe-americas"/> Toronto, Canada
+            Before joining the University of Cambridge, I graduated from the Engineering Science undergraduate program at the University of Toronto with a 4.0 cGPA. I have also worked at Arup as both a structural engineering intern and a software development intern.
+            <br/>
+            <br/>
+            <font-awesome-icon icon="globe-americas"/> Cambridge, UK
             <br/>
               <font-awesome-icon icon="coffee"/> coffee addict | 
               <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
