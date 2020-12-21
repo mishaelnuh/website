@@ -3,9 +3,9 @@
     <b-row no-gutters id="homeHeader" v-show="showHeader">
       <b-col xs="10" sm="8" align-self="center">
         <div id="homeHeaderContent" ref="homeHeader">
-          <h1>mishael nuh</h1>
+          <h2>mishael nuh</h2>
           <p>
-            Hello there! I am a PhD candidate in the Department of Engineering at the University of Cambridge under the supervision of Dr. John Orr, working on the reuse of concrete components. My interest lies in the application of optimisation and automation to concrete structures to minimise the embodied carbon of our built environment.
+            I am a PhD candidate in the Department of Engineering at the University of Cambridge under the supervision of Dr. John Orr, working on the reuse of concrete components. My interest lies in the application of optimisation and automation to concrete structures to minimise the embodied carbon of our built environment.
             <br/>
             <br/>
             Before joining the University of Cambridge, I graduated from the Engineering Science undergraduate program at the University of Toronto with a 4.0 cGPA. I have also worked at Arup as both a structural engineering intern and a software development intern.
@@ -17,18 +17,8 @@
               <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
               <font-awesome-icon icon="dog"/> dog lover
           </p>
-          <br/>
-          <div style="width: 100%; text-align: center; background-color: yellow;">
-          </div>
-        </div>
-        <div style="text-align: center;" class="mt-5">
-          <div class="chevron" @click="$refs.portfolioHeader.scrollIntoView({behavior: 'smooth', block: 'start'})"></div>
-          <br/>
-          scroll
         </div>
       </b-col>
-    </b-row>
-    <b-row no-gutters id="homeHeaderSpacer">
     </b-row>
     <b-row class="sticky-top" ref="portfolioHeader" id="portfolioHeader">
       <b-col>

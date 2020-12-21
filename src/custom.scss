@@ -2,11 +2,12 @@
 
 $theme-colors: (
   "primary":    #465B6B,
-  "secondary":  #EDF1F6,
-  "light":      #EDF1F6,
-  "dark":       #465B6B,
-  "text":       #465B6B,
-  "highlight":  #00FFFF,
+  "secondary":  #f6f6f6,
+  "light":      #f1f1f1,
+  "dark":       #656565,
+  "text":       #696969,
+  "highlight":  #d6d6d6,
+  "darkbg":     #000000,
 );
 
 @import 'node_modules/bootstrap/scss/bootstrap';
@@ -96,23 +97,13 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  z-index: 0;
+  min-height: 60vh;
   left: 0;
-  position: fixed;
 }
 
 #homeHeaderContent {
   background-color: color("white");
-  padding: 0 30px;
-}
-
-#homeHeaderSpacer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  z-index: -50;
+  padding: 30px 30px;
 }
 
 #portfolioHeader {
@@ -149,35 +140,8 @@ h3 {
 
 #markdown img {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
   border: 1px solid color("dark");
-}
-
-.chevron{
-  position: relative;
-  display: block;
-  height: 30px;
-  cursor: pointer;
-}
-
-.chevron:before,
-.chevron:after{
-  left: 50%;
-  margin-left: -30px;
-  position: absolute;
-  display: block;
-  content: "";
-  border: 30px solid transparent;
-}
-
-.chevron:before{
-  top: 0;
-  border-top-color: theme-color("text");
-}
-
-.chevron:after{
-  top: -15px;
-  border-top-color: color("white");
 }
