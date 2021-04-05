@@ -18,16 +18,6 @@
           </div>
         </b-col>
       </b-row>
-      <b-row no-gutters>
-        <b-col>
-          <div style="text-align: center;">
-            <a class="pageNavIcon" href="#" @click="goToPrev"><font-awesome-icon icon="arrow-left"/></a>
-            <a class="pageNavIcon" href="#" @click="goToNext"><font-awesome-icon icon="arrow-right"/></a>
-            <br/>
-            <br/>
-          </div>
-        </b-col>
-      </b-row>
     </b-container>
   </div>
 </template>

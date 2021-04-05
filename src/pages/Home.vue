@@ -1,9 +1,9 @@
 <template>
   <div>
     <b-row no-gutters id="homeHeader" v-show="showHeader">
-      <b-col xs="10" sm="8" align-self="center">
-        <div id="homeHeaderContent" ref="homeHeader">
-          <h2>mishael nuh</h2>
+      <b-col lg="12">
+        <div ref="homeHeader">
+          <h1>Mishael Nuh</h1>
           <p>
             I am a PhD candidate in the Department of Engineering at the University of Cambridge under the supervision of Dr. John Orr, working on the reuse of concrete components. My interest lies in the application of optimisation and automation to concrete structures to minimise the embodied carbon of our built environment.
             <br/>
@@ -15,14 +15,14 @@
             <br/>
               <font-awesome-icon icon="coffee"/> coffee addict | 
               <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
-              <font-awesome-icon icon="dog"/> dog lover
+              <font-awesome-icon icon="dog"/> dog obsessed
           </p>
         </div>
       </b-col>
     </b-row>
-    <b-row class="sticky-top" ref="portfolioHeader" id="portfolioHeader">
+    <b-row class="sticky-top contentHeader" ref="portfolioHeader">
       <b-col>
-        <h2>portfolio</h2>
+        <h1>Portfolio</h1>
         <div id="filterContainer">
           <b-badge :variant="filteredTags.includes(t) ? 'highlight' : 'light'" v-for="t in tags" :key="t" class="mr-2 mb-2" @click="setTag(t)">{{t}}</b-badge>
         </div>
@@ -80,7 +80,7 @@ export default {
       }
       
       var currAllowance = 12
-      const widthRange = [3, 6]
+      const widthRange = [4, 6]
 
       filteredPages.forEach(p => {
         p.width = Math.floor(Math.random()*(widthRange[1] - widthRange[0])) + widthRange[0]

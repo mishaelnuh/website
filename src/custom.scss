@@ -1,31 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 $theme-colors: (
   "primary":    #465B6B,
-  "secondary":  #f6f6f6,
+  "secondary":  #eaeaea,
   "light":      #f1f1f1,
   "dark":       #656565,
-  "text":       #696969,
+  "text":       #333333,
   "highlight":  #d6d6d6,
-  "darkbg":     #000000,
+  "bg":         #fafafa,
+  "navbar":     #333333,
 );
 
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
 html, body {
-  font-family: 'Bitter', serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 #app {
-  font-family: 'Bitter', serif;
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: theme-color("text");
 }
 
 body {
-  background: color("white");
+  background: theme-color("bg");
 }
 
 *:focus {
@@ -41,7 +42,6 @@ h1 {
   display: inline-block;
   font-size: 30px !important;
   font-weight: bold !important;
-  background: linear-gradient(180deg,rgba(255,255,255,0) 60%, theme-color('highlight') 40%);
 }
 
 h2 {
@@ -66,14 +66,18 @@ h3 {
 }
 
 .navbar {
-  background-color: color("white");
+  background-color: theme-color("navbar");
   height: 60px;
   z-index: 300;
 }
 
 .navbar-brand {
   font-size: 20px !important;
-  color: theme-color("dark") !important;
+  color: theme-color("bg") !important;
+}
+
+.navbarIcon {
+  color: theme-color("bg");
 }
 
 .footer {
@@ -101,15 +105,14 @@ h3 {
   left: 0;
 }
 
-#homeHeaderContent {
-  background-color: color("white");
-  padding: 30px 30px;
+.contentSeparator {
+  min-height: 10vh;
 }
 
-#portfolioHeader {
-  background: color("white");
-  padding-top: 60px;
-  padding-bottom: 10px;
+.contentHeader {
+  background: theme-color("bg");
+  padding-top: 70px;
+  padding-bottom: 30px;
   z-index: 1;
 }
 
@@ -138,10 +141,27 @@ h3 {
   text-align: left;
 }
 
-#markdown img {
+.mdImgContainer {
   display: flex;
-  max-width: 100%;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.mdImgContainer img {
+  max-height: 150px;
   margin-bottom: 10px;
+  margin-right: 10px;
   border: 1px solid color("dark");
+}
+
+@include media-breakpoint-down(sm) {
+  .mdImgContainer {
+    align-items: flex-start;
+  }
+
+  .mdImgContainer img {
+    max-width: 30%;
+    max-height: 150px;
+  }
 }

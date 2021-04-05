@@ -1,3 +1,5 @@
-Worked on various projects at the Greater Toronto Pearson Airport as a Structural Intern at [Arup](https://arup.com).
+<div class="mdImgContainer">
+    <img src="http://www.urbacon.net/wp-content/uploads/2017/07/gtaa_1.jpg">
+</div>
 
-![image-test](http://www.urbacon.net/wp-content/uploads/2017/07/gtaa_1.jpg)
+Worked on various projects at the Greater Toronto Pearson Airport as a Structural Intern at [Arup](https://arup.com).

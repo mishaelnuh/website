@@ -1,10 +1,11 @@
 [<button type="button" class="btn btn-secondary">GitHub</button>](https://github.com/speckleworks/speckleadmin)
 [<button type="button" class="btn btn-secondary">Documentation</button>](https://speckle.systems/docs/web/processor)
+<div class="mdImgContainer">
+    <img src="/page/speckleprocessor/flow.png">
+    <img src="/page/speckleprocessor/example-output.jpg">
+    <img src="/page/speckleprocessor/example.gif">
+</div>
 
 SpeckleProcessor is an extention to the web admin application of the [Speckle](https://speckle.systems) open source project: a data platform for the architecture, engineering, and construction industry. It allows for manipulation of data within the server directly from the web app. Custom functions can be created and deployed from an instance of the web app using Netlify and AWS lambdas.
 
 SpeckleProcessor can be tested in the [app.speckle.systems](https://app.speckle.systems) deployment of SpeckleAdmin.
-
-![image-test](/page/speckleprocessor/flow.png)
-![image-test](/page/speckleprocessor/example-output.jpg)
-![image-test](/page/speckleprocessor/example.gif)
