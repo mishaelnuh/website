@@ -1,6 +1,6 @@
 <template>
   <div v-if="page">
-    <b-container>
+    <b-container style="margin: 0; padding: 0;">
       <b-row no-gutters class="mt-5">
         <b-col>
           <div id="pageHeader">
@@ -52,7 +52,7 @@ export default {
 
           return `
             <div class="pageImageContainer">
-              <img class="pageImage" src="${href}" alt="${text}" type="button" data-bs-toggle="modal" data-bs-target="#${randId}">
+              <img class="pageImage" src="${href}" alt="${text}" data-bs-toggle="modal" data-bs-target="#${randId}">
             </div>
             <div id="${randId}" class="modal fade" tabindex="-1">
               <div class="modal-dialog modal-lg modal-dialog-centered">

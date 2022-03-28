@@ -35,7 +35,7 @@
         <b-row style="padding: 0px;" no-gutters id="portfolioSelector">
           <b-col :md="p.width" style="padding: 0px;" v-for="p in filteredPages" :key="p.id">
               <b-card class="hoverCard" img-top :img-src="p.image" @click="clickPage(p)">
-                <b-card-body style="text-align: left;">
+                <b-card-body>
                   <b-card-text>
                     <h3>{{p.title}}</h3>
                     <div v-if="p.tags">
@@ -44,7 +44,6 @@
                     <br/>
                     {{p.shortDesc}}
                   </b-card-text>
-                  
                 </b-card-body>
               </b-card>
           </b-col>

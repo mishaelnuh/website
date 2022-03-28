@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory  } from 'vue-router'
 import Home from './pages/HomePage.vue'
 import Page from './pages/PagePage.vue'
 
 export default createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory (),
   routes: [
     {
       path: '/',

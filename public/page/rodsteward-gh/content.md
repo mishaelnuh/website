@@ -1,4 +1,4 @@
-[<button type="button" class="btn btn-secondary")GitHub</button>](https://github.com/mishaelnuh/RodSteward-GH)
+[<button type="button" class="btn btn-secondary">GitHub</button>](https://github.com/mishaelnuh/RodSteward-GH)
 
 RodSteward-GH is a Grasshopper plugin based on the [RodSteward](http://www.dgp.toronto.edu/projects/rodsteward/) software package by Alec Jacobson. It allows users to create and generate structures constructed with rods and 3D printed parts. RodSteward-GH is being developed as part of my bachelor's thesis.
 

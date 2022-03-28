@@ -36,7 +36,6 @@ body {
 
 * {
   border-radius: 0 !important;
-  font-size: 16px !important;
 }
 
 h1 {
@@ -78,8 +77,8 @@ h3 {
 
 .navbar {
   background-color: map-get($theme-colors, "navbar");
-  height: 60px;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   z-index: 300;
 }
 
@@ -103,15 +102,20 @@ h3 {
 
 .hoverCard {
   transition: 0.3s;
-  border: 5px solid;
-  border-color: map-get($theme-colors, "light");
+  border: 3px solid;
+  border-color: map-get($theme-colors, "dark");
   margin: 0px;
   height: 100%;
 }
 
 .hoverCard:hover {
   cursor: pointer;
-  border-color: map-get($theme-colors, "dark");
+  border-color: map-get($theme-colors, "light");
+}
+
+.card-body {
+  padding: 3px;
+  padding-top: 10px;
 }
 
 #homeHeader {
@@ -130,7 +134,7 @@ h3 {
 .contentHeader {
   background: map-get($theme-colors, "bg");
   padding-top: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   z-index: 1;
 }
 
