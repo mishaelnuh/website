@@ -1,18 +1,18 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from './pages/HomePage.vue'
+import Page from './pages/PagePage.vue'
 
-Vue.use(VueRouter)
-
-export default new VueRouter({
+export default createRouter({
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: () => import('./pages/Home.vue'),
+      component: Home,
     },
     {
       path: '/page/:pageId',
       name: 'page',
-      component: () => import('./pages/Page.vue'),
+      component: Page,
     }]
 })

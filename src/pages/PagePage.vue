@@ -24,10 +24,10 @@
 
 <script>
 import pageData from "../data/pages.json"
-import marked from "marked"
+import { marked } from "marked"
 
 export default {
-  name: "Page",
+  name: 'PagePage',
   data() {
     return {
       pages: pageData,
@@ -46,6 +46,27 @@ export default {
   mounted() {
     if (this.$route.params.pageId)
     {
+      const renderer = {
+        image(href, _, text) {
+          var randId =  "img" + Math.floor(Math.random() * 1000000);
+
+          return `
+            <div class="pageImageContainer">
+              <img class="pageImage" src="${href}" alt="${text}" type="button" data-bs-toggle="modal" data-bs-target="#${randId}">
+            </div>
+            <div id="${randId}" class="modal fade" tabindex="-1">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img src="${href}" alt="${text}" style="width: 100%;" >
+                  </div>
+                </div>
+              </div>
+            </div>`;
+        }
+      };
+      marked.use({ renderer })
+
       this.selectedId = this.$route.params.pageId
       if (!this.page) {
         this.$router.push('/')
@@ -54,7 +75,7 @@ export default {
       http.open('GET', this.page.content)
       http.send()
       http.onreadystatechange = () => {
-        this.markdownContent = marked(http.responseText)
+        this.markdownContent = marked.parse(http.responseText)
       }
     }
     else

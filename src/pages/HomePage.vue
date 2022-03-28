@@ -5,39 +5,41 @@
         <div ref="homeHeader">
           <h1>Mishael Nuh</h1>
           <p>
-            I am a PhD candidate in the Department of Engineering at the University of Cambridge under the supervision of Dr. John Orr, working on the reuse of concrete components. My interest lies in the application of optimisation and automation to concrete structures to minimise the embodied carbon of our built environment.
+            I am a PhD candidate in the Department of Engineering at the University of Cambridge under the supervision of Dr. John Orr, working on the reuse of concrete components through digital fabrication methods. My interest lies in the application of optimisation and automation to concrete structures to minimise the embodied carbon in our built environment.
             <br/>
             <br/>
-            Before joining the University of Cambridge, I graduated from the Engineering Science undergraduate program at the University of Toronto with a 4.0 cGPA. I have also worked at Arup as both a structural engineering intern and a software development intern.
+            Before joining the University of Cambridge, I graduated from the Engineering Science undergraduate program at the University of Toronto. I have also worked at Arup as both a structural engineering intern and a software development intern.
             <br/>
             <br/>
             <font-awesome-icon icon="globe-americas"/> Cambridge, UK
             <br/>
               <font-awesome-icon icon="coffee"/> coffee addict | 
-              <font-awesome-icon icon="pen-fancy"/> fountain pen collector | 
+              <font-awesome-icon icon="dice-d20"/> board game enthusiast | 
               <font-awesome-icon icon="dog"/> dog obsessed
           </p>
         </div>
       </b-col>
     </b-row>
-    <b-row class="sticky-top contentHeader" ref="portfolioHeader">
-      <b-col>
-        <h1>Portfolio</h1>
-        <div id="filterContainer">
-          <b-badge :variant="filteredTags.includes(t) ? 'highlight' : 'light'" v-for="t in tags" :key="t" class="mr-2 mb-2" @click="setTag(t)">{{t}}</b-badge>
-        </div>
-      </b-col>
+    <b-row class="sticky-top contentHeader">
+      <div ref="portfolioHeader">
+        <b-col>
+          <h1>Portfolio</h1>
+          <div id="filterContainer">
+            <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in tags" :key="t" class="mr-2 mb-2" @click="setTag(t)">{{t}}</b-badge>
+          </div>
+        </b-col>
+      </div>
     </b-row>
-    <b-row no-gutters ref="portfolioSelector">
+    <b-row  no-gutters ref="portfolioSelector">
       <b-col id="portfolioSelectorContainer">
-        <b-row no-gutters id="portfolioSelector">
-          <b-col :md="p.width" v-for="p in filteredPages" :key="p.id">
-              <b-card class="hoverCard" style="height: 100%;" img-top :img-src="p.image" @click="clickPage(p)">
+        <b-row style="padding: 0px;" no-gutters id="portfolioSelector">
+          <b-col :md="p.width" style="padding: 0px;" v-for="p in filteredPages" :key="p.id">
+              <b-card class="hoverCard" img-top :img-src="p.image" @click="clickPage(p)">
                 <b-card-body style="text-align: left;">
                   <b-card-text>
                     <h3>{{p.title}}</h3>
                     <div v-if="p.tags">
-                      <b-badge :variant="filteredTags.includes(t) ? 'highlight' : 'light'" v-for="t in p.tags.sort()" :key="t" class="mr-2 mb-2">{{t}}</b-badge>
+                      <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in p.tags.sort()" :key="t" class="mr-2 mb-2">{{t}}</b-badge>
                     </div>
                     <br/>
                     {{p.shortDesc}}
@@ -59,7 +61,7 @@
 import pageData from "../data/pages.json";
 
 export default {
-  name: "Home",
+  name: "HomePage",
   data() {
     return {
       scrollThreshold: 0,
