@@ -1,17 +1,5 @@
 [
   {
-    "id": "monstergenerator",
-    "title": "Monster Card Generator",
-    "tags": [
-      "js",
-      "vue",
-      "frontend"
-    ],
-    "shortDesc": "Generator monster cards using various APIs",
-    "image": "/page/monstergenerator/banner.png",
-    "content": "/page/monstergenerator/content.md"
-  },
-  {
     "id": "stadium",
     "title": "Stadium Design",
     "tags": [

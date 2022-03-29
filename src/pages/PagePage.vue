@@ -5,10 +5,6 @@
         <b-col>
           <div id="pageHeader">
             <h1>{{page.title}}</h1>
-            <br/>
-            <br/>
-            <a class="pageNavIcon" @click="goToPrev"><font-awesome-icon icon="arrow-left"/></a>
-            <a class="pageNavIcon" @click="goToNext"><font-awesome-icon icon="arrow-right"/></a>
           </div>
         </b-col>
       </b-row>
@@ -16,6 +12,14 @@
         <b-col>
           <div id="markdown" v-html="markdownContent">
           </div>
+        </b-col>
+      </b-row>
+      <b-row no-gutters id="pageNav">
+        <b-col>
+          <a @click="goToPrev" type="button">previous</a>
+        </b-col>
+        <b-col style="text-align: right;">
+          <a @click="goToNext" type="button">next</a>
         </b-col>
       </b-row>
     </b-container>

@@ -30,10 +30,16 @@
         </b-col>
       </div>
     </b-row>
-    <b-row  no-gutters ref="portfolioSelector">
+    <b-row no-gutters>
+      <b-col>
+        <div ref="portfolioSelector">
+        </div>
+      </b-col>
+    </b-row>
+    <b-row no-gutters>
       <b-col id="portfolioSelectorContainer">
         <b-row style="padding: 0px;" no-gutters id="portfolioSelector">
-          <b-col :md="p.width" style="padding: 0px;" v-for="p in filteredPages" :key="p.id">
+          <b-col :md="p.width" style="padding: 5px;" v-for="p in filteredPages" :key="p.id">
               <b-card class="hoverCard" img-top :img-src="p.image" @click="clickPage(p)">
                 <b-card-body>
                   <b-card-text>
@@ -58,6 +64,7 @@
 
 <script>
 import pageData from "../data/pages.json";
+import { user }  from "scholarly";
 
 export default {
   name: "HomePage",
@@ -66,7 +73,8 @@ export default {
       scrollThreshold: 0,
       pages: pageData,
       showHeader: true,
-      filteredTags: []
+      filteredTags: [],
+      googleScholarData: {}
     };
   },
   computed: {
@@ -81,7 +89,7 @@ export default {
       }
       
       var currAllowance = 12
-      const widthRange = [4, 6]
+      const widthRange = [4, 4]
 
       filteredPages.forEach(p => {
         p.width = Math.floor(Math.random()*(widthRange[1] - widthRange[0])) + widthRange[0]
@@ -106,6 +114,11 @@ export default {
   },
   created () {
     window.addEventListener('scroll', this.handleScroll);
+  },
+  mounted() {
+    user("qs2w0FkAAAAJ").then((data) => {
+      this.googleScholarData = data
+    });
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -134,9 +147,11 @@ export default {
         this.filteredTags.push(tag)
       }
       const portfolioHeaderBounds = this.$refs.portfolioHeader.getBoundingClientRect()
-      if (portfolioHeaderBounds.top === 0) {
-        this.$refs.portfolioSelector.scrollIntoView(true)
-        window.scrollBy(0, - portfolioHeaderBounds.height + 1)
+      if (portfolioHeaderBounds.top === 70) {
+        window.scrollBy({
+          top: this.$refs.portfolioSelector.getBoundingClientRect().top - portfolioHeaderBounds.top - portfolioHeaderBounds.height - 8,
+          behavior: 'instant'
+        })
       }
     }
   }
