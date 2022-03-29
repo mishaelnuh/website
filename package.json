@@ -24,7 +24,6 @@
     "node-sass": "^7.0.1",
     "paper": "^0.12.15",
     "sass-loader": "^12.6.0",
-    "scholarly": "^1.1.1",
     "serialize-javascript": "^6.0.0",
     "vue": "^3.2.31",
     "vue-router": "^4.0.14"

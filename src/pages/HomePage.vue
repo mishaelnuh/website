@@ -64,7 +64,6 @@
 
 <script>
 import pageData from "../data/pages.json";
-import { user }  from "scholarly";
 
 export default {
   name: "HomePage",
@@ -114,11 +113,6 @@ export default {
   },
   created () {
     window.addEventListener('scroll', this.handleScroll);
-  },
-  mounted() {
-    user("qs2w0FkAAAAJ").then((data) => {
-      this.googleScholarData = data
-    });
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
