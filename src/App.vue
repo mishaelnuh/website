@@ -8,7 +8,6 @@
         <b-nav-item href="mailto:mishael.ebel.nuh@gmail.com"><font-awesome-icon icon="envelope" class="navbarIcon"/></b-nav-item>
       </b-nav>
     </nav>
-        
     <b-container>
       <b-row>
         <b-col>

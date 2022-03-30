@@ -30,31 +30,53 @@
         </b-col>
       </div>
     </b-row>
-    <b-row no-gutters>
-      <b-col>
-        <div ref="portfolioSelector">
-        </div>
+    <b-row style="padding: 0px;" no-gutters id="portfolioSelector">
+      <div ref="portfolioSelector">
+      </div>
+      <b-col :md="p.width" style="padding: 5px;" v-for="p in filteredPages" :key="p.id">
+          <b-card class="hoverCard" img-top :img-src="p.image" @click="clickPage(p)">
+            <b-card-body>
+              <b-card-text>
+                <h3>{{p.title}}</h3>
+                <div v-if="p.tags">
+                  <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in p.tags.sort()" :key="t" class="mr-2 mb-2">{{t}}</b-badge>
+                </div>
+                <br/>
+                {{p.shortDesc}}
+              </b-card-text>
+            </b-card-body>
+          </b-card>
+      </b-col>
+      <b-col v-if="filteredPages.length === 0" style="text-align: center;">
+        no matches
       </b-col>
     </b-row>
-    <b-row no-gutters>
-      <b-col id="portfolioSelectorContainer">
-        <b-row style="padding: 0px;" no-gutters id="portfolioSelector">
-          <b-col :md="p.width" style="padding: 5px;" v-for="p in filteredPages" :key="p.id">
-              <b-card class="hoverCard" img-top :img-src="p.image" @click="clickPage(p)">
-                <b-card-body>
-                  <b-card-text>
-                    <h3>{{p.title}}</h3>
-                    <div v-if="p.tags">
-                      <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in p.tags.sort()" :key="t" class="mr-2 mb-2">{{t}}</b-badge>
-                    </div>
-                    <br/>
-                    {{p.shortDesc}}
-                  </b-card-text>
-                </b-card-body>
-              </b-card>
+    <b-row class="sticky-top contentHeader">
+      <div ref="publicationHeader">
+        <b-col>
+          <h1>Publications and presentations</h1>
+        </b-col>
+      </div>
+    </b-row>
+    <b-row>
+      <b-col>
+        <b-row v-for="p in publications" :key="p.title" style="margin-bottom: 10px;">
+          <b-col class="col-12 col-sm-1">
+            <h4>{{p.year}}</h4>
           </b-col>
-          <b-col v-if="filteredPages.length === 0" style="text-align: center;">
-            no matches
+            <b-col md-auto>
+              <a :href="p.link" v-if="p.link">
+                {{p.title}}
+              </a>
+              <a v-if="!p.link">
+                {{p.title}}
+              </a>
+            <br/>
+              {{p.authors}}
+            <br/>
+              {{p.journal}}
+            <br/>
+            <br/>
           </b-col>
         </b-row>
       </b-col>
@@ -64,6 +86,7 @@
 
 <script>
 import pageData from "../data/pages.json";
+import publicationsData from "../data/publications.json";
 
 export default {
   name: "HomePage",
@@ -73,7 +96,7 @@ export default {
       pages: pageData,
       showHeader: true,
       filteredTags: [],
-      googleScholarData: {}
+      publications: JSON.parse(JSON.stringify(publicationsData))
     };
   },
   computed: {
@@ -126,12 +149,19 @@ export default {
     handleScroll() {
       const homeHeaderTop = this.$refs.homeHeader.getBoundingClientRect().top
       const portfolioTop = this.$refs.portfolioHeader.getBoundingClientRect().top
+      const publicationTop = this.$refs.publicationHeader.getBoundingClientRect().top
 
       if (!this.showHeader) {
         this.showHeader = this.scrollThreshold < portfolioTop
       } else {
         this.showHeader = homeHeaderTop < portfolioTop
         this.scrollThreshold = homeHeaderTop
+      }
+
+      if (publicationTop < 140) {
+        this.$refs.portfolioHeader.style.display = "none"
+      } else {
+        this.$refs.portfolioHeader.style.display = "block"
       }
     },
     setTag(tag) {
