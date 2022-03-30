@@ -65,8 +65,7 @@ h4 {
 
 @include media-breakpoint-down(sm) {
   #filterContainer {
-    overflow-x: scroll;
-    white-space: nowrap;
+    display: none;
   }
 }
 
@@ -205,4 +204,8 @@ h4 {
   .pageImageContainer {
     max-width: 30%;
   }
+}
+
+.bgcol-bg {
+  background-color: map-get($theme-colors, "bg");
 }

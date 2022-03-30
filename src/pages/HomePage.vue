@@ -51,7 +51,7 @@
         no matches
       </b-col>
     </b-row>
-    <b-row class="sticky-top contentHeader">
+    <b-row class="sticky-top contentHeader" style="z-index: 10;">
       <div ref="publicationHeader">
         <b-col>
           <h1>Publications and presentations</h1>
@@ -59,27 +59,29 @@
       </div>
     </b-row>
     <b-row>
-      <b-col>
-        <b-row v-for="p in publications" :key="p.title" style="margin-bottom: 10px;">
-          <b-col class="col-12 col-sm-1">
-            <h4>{{p.year}}</h4>
-          </b-col>
-            <b-col md-auto>
-              <a :href="p.link" v-if="p.link">
-                {{p.title}}
-              </a>
-              <a v-if="!p.link">
-                {{p.title}}
-              </a>
-            <br/>
-              {{p.authors}}
-            <br/>
-              {{p.journal}}
-            <br/>
-            <br/>
-          </b-col>
-        </b-row>
-      </b-col>
+      <div class="bgcol-bg" style="z-index: 5;">
+        <b-col>
+          <b-row no-gutters v-for="p in publications" :key="p.title">
+            <b-col class="col-12 col-sm-1">
+              <h4>{{p.year}}</h4>
+            </b-col>
+              <b-col md-auto>
+                <a :href="p.link" v-if="p.link">
+                  {{p.title}}
+                </a>
+                <a v-if="!p.link">
+                  {{p.title}}
+                </a>
+              <br/>
+                {{p.authors}}
+              <br/>
+                {{p.journal}}
+              <br/>
+              <br/>
+            </b-col>
+          </b-row>
+        </b-col>
+      </div>
     </b-row>
   </div>
 </template>
@@ -149,19 +151,12 @@ export default {
     handleScroll() {
       const homeHeaderTop = this.$refs.homeHeader.getBoundingClientRect().top
       const portfolioTop = this.$refs.portfolioHeader.getBoundingClientRect().top
-      const publicationTop = this.$refs.publicationHeader.getBoundingClientRect().top
 
       if (!this.showHeader) {
         this.showHeader = this.scrollThreshold < portfolioTop
       } else {
         this.showHeader = homeHeaderTop < portfolioTop
         this.scrollThreshold = homeHeaderTop
-      }
-
-      if (publicationTop < 140) {
-        this.$refs.portfolioHeader.style.display = "none"
-      } else {
-        this.$refs.portfolioHeader.style.display = "block"
       }
     },
     setTag(tag) {
