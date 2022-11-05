@@ -1,5 +1,18 @@
 [
   {
+    "id": "arcs",
+    "title": "Automated Robotic Concrete Spraying",
+    "tags": [
+      "structural",
+      "digital fabrication",
+      "concrete shell",
+      "university of cambridge"
+    ],
+    "shortDesc": "Digital fabrication technique for curved concrete shells",
+    "image": "/page/arcs/banner.png",
+    "content": "/page/arcs/content.md"
+  },
+  {
     "id": "stadium",
     "title": "Stadium Design",
     "tags": [

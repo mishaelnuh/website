@@ -1,5 +1,19 @@
 [
   {
+    "title": "Digital fabrication of ribbed concrete shells using automated robotic concrete spraying",
+    "authors": "Mishael Nuh, Robin Oval, John Orr, Paul Shepherd",
+    "journal": "Additive Manufacturing",
+    "year": 2022,
+    "link": "https://www.sciencedirect.com/science/article/pii/S2214860422005486"
+  },
+  {
+    "title": "ARCS: Automated Robotic Concrete Spraying for the Fabrication of Variable Thickness Doubly Curved Shells",
+    "authors": "Mishael Nuh, Robin Oval, John Orr",
+    "journal": "RILEM International Conference on Concrete and Digital Fabrication",
+    "year": 2022,
+    "link": "https://link.springer.com/chapter/10.1007/978-3-031-06116-5_40"
+  },
+  {
     "title": "A path towards the off-site automated fabrication of segmented concrete shells for building slabs",
     "authors": "Robin Oval, Eduardo Castro e Costa, Diana Thomas-McEwan, Mishael Nuh, John Orr, Paul Shepherd",
     "journal": "Proceedings of the IASS Annual Symposium 2020/21 and the 7th International Conference on Spatial Structures: Inspiring the Next Generation",
