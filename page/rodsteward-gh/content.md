@@ -8,8 +8,3 @@ The plugin takes either a mesh or a series of lines as inputs and outputs the fo
 - Laser cutting plan of rods
 
 RodSteward-GH is also able to help users assemble the structure by providing sequencing for the parts by the rod lengths and joint labels.
-
-![](/page/rodsteward-gh/gh-script.png)
-![](/page/rodsteward-gh/shelter.png)
-![](/page/rodsteward-gh/pyramid.png)
-![](/page/rodsteward-gh/structure.png)
