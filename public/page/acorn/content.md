@@ -1,0 +1,4 @@
+[<button type="button" class="btn btn-secondary">Project Site</button>](https://automated.construction)
+[<button type="button" class="btn btn-secondary">Publication</button>](https://www.sciencedirect.com/science/article/pii/S2352012423000644)
+
+The Automating Concrete Construction (ACORN) project is a UKRI funded initiative carried out by the University of Bath, University of Cambridge, and University of Dundee. As part of the project, a demonstrator thin-shell flooring system (called the OAK) was developed leveraging a novel digital fabrication technique. The system presents a sustainable alternative to conventional floor slabs through drastic material, weight, and carbon reductions.

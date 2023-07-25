@@ -6,10 +6,3 @@ Presentation given at The Thirteenth International Conference on [Computational 
 - Shear walls constructed out of the modeled coupling beams
 
 Results show that the element is generally able to capture the behaviour of the specimens accurately, capturing both the critical failure mode, peak load, as well as displacements with a relatively short computation time compared to conventional, low-powered FEM meshes.
-
-![](/page/cstx/duong_cracks.png)
-![](/page/cstx/duong_graph.png)
-![](/page/cstx/Fisher_Diagram.png)
-![](/page/cstx/CBF1_graph.png)
-![](/page/cstx/wall_diagram.png)
-![](/page/cstx/wall_animated.gif)

@@ -1,35 +1,64 @@
 [
   {
+    "id": "acorn",
+    "title": "Automating Concrete Construction",
+    "tags": [
+      "digital fabrication",
+      "concrete shell",
+      "university of cambridge"
+    ],
+    "shortDesc": "UKRI funded research project",
+    "image": "/page/acorn/banner.png",
+    "content": "/page/acorn/content.md",
+    "images": [
+      "/page/acorn/spraying.jpeg",
+      "/page/acorn/assembly1.jpeg",
+      "/page/acorn/assembly2.jpeg",
+      "/page/acorn/assembly3.jpeg",
+      "/page/acorn/closeup.jpeg",
+      "/page/acorn/testing.jpeg"
+    ]
+  },
+  {
     "id": "arcs",
     "title": "Automated Robotic Concrete Spraying",
     "tags": [
-      "structural",
       "digital fabrication",
       "concrete shell",
       "university of cambridge"
     ],
     "shortDesc": "Digital fabrication technique for curved concrete shells",
     "image": "/page/arcs/banner.png",
-    "content": "/page/arcs/content.md"
+    "content": "/page/arcs/content.md",
+    "images": [
+      "/page/arcs/setup.jpeg",
+      "/page/arcs/spraying.JPG",
+      "/page/arcs/ribbedvault.jpeg",
+      "/page/arcs/closeup.jpeg"
+    ]
   },
   {
     "id": "stadium",
     "title": "Stadium Design",
     "tags": [
-      "structural",
       "coursework",
       "university of toronto",
       "grasshopper"
     ],
     "shortDesc": "Design of a FIFA football stadium",
     "image": "/page/stadium/banner.png",
-    "content": "/page/stadium/content.md"
+    "content": "/page/stadium/content.md",
+    "images": [
+      "/page/stadium/overview.png",
+      "/page/stadium/gh.png",
+      "/page/stadium/parametric.png",
+      "/page/stadium/form.png"
+    ]
   },
   {
     "id": "rodsteward-gh",
     "title": "RodSteward-GH",
     "tags": [
-      "structural",
       "coursework",
       "university of toronto",
       "grasshopper",
@@ -38,50 +67,18 @@
     ],
     "shortDesc": "Generating structures using standard rods and 3D printed connections",
     "image": "/page/rodsteward-gh/banner.png",
-    "content": "/page/rodsteward-gh/content.md"
-  },
-  {
-    "id": "specklemeetup",
-    "title": "Speckle Community Meetup",
-    "tags": [
-      "speckle"
-    ],
-    "shortDesc": "Presented at the Speckle Community Meetup 2019 in London, UK",
-    "image": "/page/specklemeetup/banner.png",
-    "content": "/page/specklemeetup/content.md"
-  },
-  {
-    "id": "speckleexcel",
-    "title": "SpeckleExcel",
-    "tags": [
-      "speckle",
-      "excel",
-      "js"
-    ],
-    "shortDesc": "Speckle client for Microsoft Excel",
-    "image": "/page/speckleexcel/banner.png",
-    "content": "/page/speckleexcel/content.md"
-  },
-  {
-    "id": "speckleprocessor",
-    "title": "SpeckleProcessor",
-    "tags": [
-      "speckle",
-      "vue",
-      "js",
-      "netlify",
-      "lambda",
-      "frontend"
-    ],
-    "shortDesc": "Perform calculations on Speckle data from the web",
-    "image": "/page/speckleprocessor/banner.png",
-    "content": "/page/speckleprocessor/content.md"
+    "content": "/page/rodsteward-gh/content.md",
+    "images": [
+      "/page/rodsteward-gh/gh-script.png",
+      "/page/rodsteward-gh/shelter.png",
+      "/page/rodsteward-gh/pyramid.png",
+      "/page/rodsteward-gh/structure.png"
+    ]
   },
   {
     "id": "ccm",
     "title": "Canadian Canoe Museum",
     "tags": [
-      "structural",
       "arup",
       "internship",
       "etabs",
@@ -89,13 +86,15 @@
     ],
     "shortDesc": "Structural design as part of Arup",
     "image": "/page/ccm/banner.png",
-    "content": "/page/ccm/content.md"
+    "content": "/page/ccm/content.md",
+    "images": [
+      "https://aibc.ca/wp-content/uploads/2016/03/Azure_CanCanoeMuseum.jpg"
+    ]
   },
   {
     "id": "gtaa",
     "title": "Greater Toronto Pearson Airport",
     "tags": [
-      "structural",
       "arup",
       "internship",
       "etabs",
@@ -103,56 +102,78 @@
     ],
     "shortDesc": "Structural design of expansions and retrofits as part of Arup",
     "image": "/page/gtaa/banner.png",
-    "content": "/page/gtaa/content.md"
+    "content": "/page/gtaa/content.md",
+    "images": [
+      "http://www.urbacon.net/wp-content/uploads/2017/07/gtaa_1.jpg"
+    ]
   },
   {
     "id": "cstx",
     "title": "Finite Element Modelling of Large Reinforced Concrete Structures Using the Novel Hybrid Panel Truss Element",
     "tags": [
-      "structural",
       "university of toronto",
       "matlab",
       "cstx"
     ],
     "shortDesc": "Computers and Structures 2018",
     "image": "/page/cstx/banner.png",
-    "content": "/page/cstx/content.md"
+    "content": "/page/cstx/content.md",
+    "images": [
+      "/page/cstx/duong_cracks.png",
+      "/page/cstx/duong_graph.png",
+      "/page/cstx/Fisher_Diagram.png",
+      "/page/cstx/CBF1_graph.png",
+      "/page/cstx/wall_diagram.png",
+      "/page/cstx/wall_animated.gif"
+    ]
   },
   {
     "id": "magnetawan",
     "title": "Magnetawan Bridge Design",
     "tags": [
-      "structural",
       "coursework",
       "university of toronto",
       "matlab"
     ],
     "shortDesc": "Design of a prestressed concrete bridge for coursework",
     "image": "/page/magnetawan/banner.png",
-    "content": "/page/magnetawan/content.md"
+    "content": "/page/magnetawan/content.md",
+    "images": [
+      "/page/magnetawan/cover.png",
+      "/page/magnetawan/general_arrangement.png",
+      "/page/magnetawan/diaphragm.png",
+      "/page/magnetawan/ULS.png",
+      "/page/magnetawan/shear.png"
+    ]
   },
   {
     "id": "vt4",
     "title": "VecTor4 x GiD",
     "tags": [
-      "structural",
       "university of texas at austin",
       "matlab"
     ],
     "shortDesc": "Using GiD pre and post-processor with VecTor4",
     "image": "/page/vt4/banner.png",
-    "content": "/page/vt4/content.md"
+    "content": "/page/vt4/content.md",
+    "images": [
+      "/page/vt4/vt4gidmesh.png",
+      "/page/vt4/vt4gidpost.png"
+    ]
   },
   {
     "id": "hypt",
     "title": "Verification of a Novel 2D Finite Element for Reinforced and Prestressed Concrete",
     "tags": [
-      "structural",
       "university of toronto",
       "aci"
     ],
     "shortDesc": "American Concrete Institute Conference Spring 2017",
     "image": "/page/hypt/banner.png",
-    "content": "/page/hypt/content.md"
+    "content": "/page/hypt/content.md",
+    "images": [
+      "/page/hypt/Augustus2Diagram.png",
+      "/page/hypt/histogramlimit.png"
+    ]
   }
 ]

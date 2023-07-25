@@ -1,10 +1,10 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 import Router from './router'
-import BootstrapVue3 from 'bootstrap-vue-3'
+import BootstrapVueNext from 'bootstrap-vue-next'
 
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
+import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 
 import './custom.scss'
 
@@ -29,5 +29,5 @@ library.add(faEnvelope)
 createApp(App)
   .component('font-awesome-icon', FontAwesomeIcon)
   .use(Router)
-  .use(BootstrapVue3)
+  .use(BootstrapVueNext)
   .mount('#app')

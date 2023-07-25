@@ -17,7 +17,7 @@
       <b-row>
         <b-col>
           <div class="footer">
-            <p><font-awesome-icon icon="copyright"/> 2022 Mishael Nuh</p>
+            <p><font-awesome-icon icon="copyright"/> {{ new Date().getFullYear() }} Mishael Nuh</p>
           </div>
         </b-col>
       </b-row>

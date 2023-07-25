@@ -1,7 +1,7 @@
 <template>
   <div>
-    <b-row no-gutters id="homeHeader" v-show="showHeader">
-      <b-col lg="12">
+    <b-row id="homeHeader" v-show="showHeader">
+      <b-col md="12" lg="4">
         <div ref="homeHeader">
           <h1>Mishael Nuh</h1>
           <p>
@@ -13,33 +13,39 @@
             <br/>
             <font-awesome-icon icon="globe-americas"/> Cambridge, UK
             <br/>
-              <font-awesome-icon icon="coffee"/> coffee addict | 
-              <font-awesome-icon icon="dice-d20"/> board game enthusiast | 
-              <font-awesome-icon icon="dog"/> dog obsessed
+            <br/>
+            <font-awesome-icon icon="coffee"/> coffee addict
+            <br/>
+            <font-awesome-icon icon="dice-d20"/> board game enthusiast
+            <br/>
+            <font-awesome-icon icon="dog"/> dog obsessed
           </p>
         </div>
+      </b-col>
+      <b-col md="12" lg="8">
+        <img class="bannerImage" src="/img/banner.jpeg"/>
       </b-col>
     </b-row>
     <b-row class="sticky-top contentHeader">
       <div ref="portfolioHeader">
-        <b-col>
-          <h1>Portfolio</h1>
-          <div id="filterContainer">
-            <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in tags" :key="t" class="mr-2 mb-2" @click="setTag(t)">{{t}}</b-badge>
-          </div>
-        </b-col>
       </div>
+      <b-col>
+        <h1>Portfolio</h1>
+        <div id="filterContainer">
+          <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in tags" :key="t" class="mr-2 mb-2 filterBadge" @click="setTag(t)">{{t}}</b-badge>
+        </div>
+      </b-col>
     </b-row>
-    <b-row style="padding: 0px;" no-gutters id="portfolioSelector">
+    <b-row id="portfolioSelector">
       <div ref="portfolioSelector">
       </div>
-      <b-col :md="p.width" style="padding: 5px;" v-for="p in filteredPages" :key="p.id">
+      <b-col :md="12" :lg="p.width" style="padding: 5px;" v-for="p in filteredPages" :key="p.id">
           <b-card class="hoverCard" img-top :img-src="p.image" @click="clickPage(p)">
             <b-card-body>
               <b-card-text>
                 <h3>{{p.title}}</h3>
                 <div v-if="p.tags">
-                  <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in p.tags.sort()" :key="t" class="mr-2 mb-2">{{t}}</b-badge>
+                  <b-badge :variant="filteredTags.includes(t) ? 'dark' : 'light'" v-for="t in p.tags.sort()" :key="t" class="mr-2 mb-2 cardBadge">{{t}}</b-badge>
                 </div>
                 <br/>
                 {{p.shortDesc}}
@@ -58,20 +64,20 @@
         </b-col>
       </div>
     </b-row>
-    <b-row>
+    <b-row style="z-index: 10;">
       <div class="bgcol-bg" style="z-index: 5;">
         <b-col>
           <b-row no-gutters v-for="p in publications" :key="p.title">
             <b-col class="col-12 col-sm-1">
               <h4>{{p.year}}</h4>
             </b-col>
-              <b-col md-auto>
-                <a :href="p.link" v-if="p.link">
-                  {{p.title}}
-                </a>
-                <a v-if="!p.link">
-                  {{p.title}}
-                </a>
+            <b-col md-auto>
+              <a :href="p.link" v-if="p.link">
+                {{p.title}}
+              </a>
+              <a v-if="!p.link">
+                {{p.title}}
+              </a>
               <br/>
                 {{p.authors}}
               <br/>
@@ -113,7 +119,7 @@ export default {
       }
       
       var currAllowance = 12
-      const widthRange = [4, 4]
+      const widthRange = [3, 5]
 
       filteredPages.forEach(p => {
         p.width = Math.floor(Math.random()*(widthRange[1] - widthRange[0])) + widthRange[0]
@@ -168,7 +174,7 @@ export default {
       const portfolioHeaderBounds = this.$refs.portfolioHeader.getBoundingClientRect()
       if (portfolioHeaderBounds.top === 70) {
         window.scrollBy({
-          top: this.$refs.portfolioSelector.getBoundingClientRect().top - portfolioHeaderBounds.top - portfolioHeaderBounds.height - 8,
+          top: this.$refs.portfolioSelector.getBoundingClientRect().top - portfolioHeaderBounds.top - portfolioHeaderBounds.height - 120,
           behavior: 'instant'
         })
       }

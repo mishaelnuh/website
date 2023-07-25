@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap-vue-3/dist/bootstrap-vue-3';
+@import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap-vue-next/dist/bootstrap-vue-next';
 
 $theme-colors: (
   "primary":    #333333,
@@ -9,20 +7,12 @@ $theme-colors: (
   "light":      #f1f1f1,
   "dark":       #333333,
   "text":       #333333,
-  "highlight":  #aaaaaa,
+  "highlight":  #21a0a0,
   "bg":         #ffffff,
-  "navbar":     #333333,
+  "navbar":     #161616,
 );
 
-
-html, body {
-  font-family: 'Lato', normal;
-}
-
 #app {
-  font-family: 'Lato', normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: map-get($theme-colors, "text");
 }
 
@@ -41,26 +31,36 @@ body {
 h1 {
   display: inline-block;
   font-size: 30px !important;
-  font-weight: bold !important;
+  font-weight: 700;
+  color: map-get($theme-colors, "highlight");
 }
 
 h2 {
   font-size: 20px !important;
-  font-weight: bold !important;
+  font-weight: 500;
 }
 
 h3 {
   font-size: 18px !important;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 h4 {
   font-size: 15px !important;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-.badge {
+a {
+  color: map-get($theme-colors, "highlight");
+}
+
+.filterBadge {
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.filterBadge:hover {
+  color: map-get($theme-colors, "highlight") !important;
 }
 
 @include media-breakpoint-down(sm) {
@@ -108,13 +108,22 @@ h4 {
   cursor: pointer;
   transition: 0.2s;
   border: 5px solid;
-  border-color: map-get($theme-colors, "light");
+  border-color: map-get($theme-colors, "dark");
   margin: 0px;
   height: 100%;
 }
 
 .hoverCard:hover {
-  border-color: map-get($theme-colors, "dark");
+  border-color: map-get($theme-colors, "highlight");
+  color: map-get($theme-colors, "highlight");
+}
+
+.cardBadge{
+  transition: 0.2s;
+}
+
+.hoverCard:hover .cardBadge {
+  color: map-get($theme-colors, "highlight") !important;
 }
 
 .card-body {
@@ -128,12 +137,14 @@ h4 {
 }
 
 #homeHeader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-height: 60vh;
-  left: 0;
-  padding-top: 30px;
+  padding-top: 70px;
+}
+
+.bannerImage {
+  max-width: 100%;
+  border: 5px solid;
+  border-color: map-get($theme-colors, "dark");
 }
 
 .contentSeparator {
@@ -157,11 +168,6 @@ h4 {
   background-color: map-get($theme-colors, "bg");
 }
 
-#pageHeader {
-  text-align: left;
-  padding: 0 0 0 0;
-}
-
 #pageNav {
   background-color: map-get($theme-colors, "light");
   color: map-get($theme-colors, "text");
@@ -175,29 +181,29 @@ h4 {
   color: map-get($theme-colors, "text");
 }
 
-#markdown {
+#pageContent {
   text-align: left;
+  padding-top: 70px;
+}
+
+@include media-breakpoint-up(lg) {
+  #pageContent{
+    position: sticky;
+    top: 70px;
+  }      
 }
 
 .pageImageContainer {
-  transition: 0.2s;
-  float: left;
-  max-width: 150px;
-  height: 150px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  width: 100%;
   overflow: hidden;
+  text-align: center;
   border: 5px solid;
-  border-color: map-get($theme-colors, "light");
-  cursor: pointer;
-}
-
-.pageImageContainer:hover {
   border-color: map-get($theme-colors, "dark");
 }
 
 .pageImage {
-  max-height: 100%;
+  max-width: 100%;
+  max-height: 800px;
 }
 
 @include media-breakpoint-down(sm) {
